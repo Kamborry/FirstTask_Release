@@ -1,4 +1,4 @@
-package com.raywenderlich.firsttask_release.ui.main
+package com.tlugovaya.firsttask_release.ui.main
 
 //todo Повторить экран релиза (кроме тулбара с картинкой, списка кадров и рейтинга)
 // при клике на кнопку "поделиться", "купить билеты", "трейллер" отображать

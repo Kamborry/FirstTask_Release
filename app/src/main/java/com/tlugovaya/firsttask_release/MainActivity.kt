@@ -1,8 +1,8 @@
-package com.raywenderlich.firsttask_release
+package com.tlugovaya.firsttask_release
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import com.raywenderlich.firsttask_release.ui.main.MainFragment
+import com.tlugovaya.firsttask_release.ui.main.MainFragment
 
 class MainActivity : AppCompatActivity() {
 
