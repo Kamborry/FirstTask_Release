@@ -1,3 +1,4 @@
 <resources>
     <string name="app_name">FirstTask_Release</string>
+    <string name="button_release_name">Click for release</string>
 </resources>
