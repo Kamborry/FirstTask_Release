@@ -17,10 +17,11 @@ class MainFragment : Fragment() {
     private lateinit var viewModel: MainViewModel
 
     override fun onCreateView(
-        inflater: LayoutInflater, container: ViewGroup?,
+        inflater: LayoutInflater,
+        container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View {
-        return inflater.inflate(R.layout.fragment_main, container, false)
+        return inflater.inflate(R.layout.fragment_release, container, false)
     }
 
     override fun onActivityCreated(savedInstanceState: Bundle?) {
@@ -28,5 +29,9 @@ class MainFragment : Fragment() {
         viewModel = ViewModelProvider(this).get(MainViewModel::class.java)
         // TODO: Use the ViewModel
     }
+
+    //Glide.with(context)
+    //    .load("http://via.placeholder.com/300.png")
+    //    .into(ivImg)
 
 }
