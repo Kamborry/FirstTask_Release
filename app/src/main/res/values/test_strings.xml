@@ -1,3 +1,16 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
+    <string name="title_test">Веномный веном</string>
+    <string name="age_rating_test">6+</string>
+    <string name="genres_test">Анимация</string>
+    <string name="premiere_test">12 октября 2018</string>
+    <string name="countries_test">США, Китай</string>
+    <string name="duration_test">1 ч. 15 мин.</string>
+    <string name="directors_test">Рубен Флейшер</string>
+    <string name="cast_test">Том Харди, Мишель Уильямс, Рейд Скотт, Риз Ахмед, Скотт Хэйз</string>
+    <string name="story_test">Веном (Том Харди) - один из самых известных супергероев вселенной
+    Человека-паука. Это симбиот, разумное существо инопланетного  происхождения, которое вселяется
+    в тело…</string>
+    <string name="rating_test">7.6</string>
+    <string name="IMDb_test">6.1</string>
 </resources>

@@ -1,4 +1,13 @@
 <resources>
-    <string name="app_name">FirstTask_Release</string>
-    <string name="button_release_name">Click for release</string>
+    <string name="premiere_release">Премьера</string>
+    <string name="country_release">Страна</string>
+    <string name="trailer_release">Трейлер</string>
+    <string name="info_release">Информация</string>
+    <string name="duration_release">Продолжительность</string>
+    <string name="director_release">Режисёр</string>
+    <string name="starring_release">В ролях</string>
+    <string name="story_release">Сюжет</string>
+    <string name="moviesearch_release">Кинопоиск</string>
+    <string name="IMDb_release">IMDb</string>
+    <string name="stills_release">Кадры</string>
 </resources>
