@@ -21,8 +21,6 @@
         style="@style/BlackButton"
         android:layout_width="160dp"
         android:layout_height="100dp"
-        android:clickable="true"
-        android:focusable="true"
         android:text="@string/button_release_name"
         android:textSize="20sp"
         app:layout_constraintBottom_toBottomOf="parent"
