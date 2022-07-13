@@ -4,10 +4,11 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/scrollable_release"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    android:background="@color/white">
 
     <androidx.constraintlayout.widget.ConstraintLayout
-        android:id="@+id/main_container"
+        android:id="@+id/release_main_container"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         tools:context=".ui.main.MainPageFragment">
@@ -23,21 +24,287 @@
             android:id="@+id/image_release_preview"
             android:layout_width="80dp"
             android:layout_height="120dp"
-            android:layout_marginTop="16dp"
             android:layout_marginStart="16dp"
+            android:layout_marginTop="16dp"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/release_toolbar"
             app:srcCompat="@drawable/ic_release_preview" />
 
         <TextView
-            android:id="@+id/age_rating"
+            android:id="@+id/release_age_rating"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="20dp"
             android:layout_marginTop="17dp"
-            android:text="6+"
+            android:text="@string/age_rating_test"
             app:layout_constraintStart_toEndOf="@+id/image_release_preview"
             app:layout_constraintTop_toBottomOf="@+id/release_toolbar" />
+
+        <TextView
+            android:id="@+id/genres"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="12dp"
+            android:layout_marginTop="17dp"
+            android:text="@string/genres_test"
+            app:layout_constraintStart_toEndOf="@id/release_age_rating"
+            app:layout_constraintTop_toBottomOf="@id/release_toolbar" />
+
+        <TextView
+            android:id="@+id/release_premiere"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="17dp"
+            android:text="@string/premiere_release"
+            app:layout_constraintStart_toEndOf="@+id/image_release_preview"
+            app:layout_constraintTop_toBottomOf="@+id/genres" />
+
+        <TextView
+            android:id="@+id/release_premiere_date"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="2dp"
+            android:text="@string/premiere_test"
+            app:layout_constraintStart_toEndOf="@+id/image_release_preview"
+            app:layout_constraintTop_toBottomOf="@+id/release_premiere" />
+
+        <TextView
+            android:id="@+id/release_country"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="8dp"
+            android:text="@string/country_release"
+            app:layout_constraintStart_toEndOf="@+id/image_release_preview"
+            app:layout_constraintTop_toBottomOf="@+id/release_premiere_date" />
+
+        <TextView
+            android:id="@+id/release_country_locale"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="2dp"
+            android:text="@string/countries_test"
+            app:layout_constraintStart_toEndOf="@+id/image_release_preview"
+            app:layout_constraintTop_toBottomOf="@+id/release_country" />
+
+        <View
+            android:id="@+id/release_view_first"
+            android:layout_width="0dp"
+            android:layout_height="1dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="18.7dp"
+            android:layout_marginEnd="16dp"
+            android:background="@color/light_gray"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/release_country_locale" />
+
+        <TextView
+            android:id="@+id/release_trailer"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="12dp"
+            android:layout_marginEnd="16dp"
+            android:text="@string/trailer_release"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/release_view_first" />
+
+        <ImageView
+            android:id="@+id/release_poster"
+            android:layout_width="match_parent"
+            android:scaleType="fitXY"
+            android:layout_height="168dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginEnd="16dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/release_trailer"
+            app:srcCompat="@drawable/ic_release_poster" />
+
+        <ImageView
+            android:id="@+id/release_play_image"
+            android:layout_width="56dp"
+            android:layout_height="56dp"
+            app:layout_constraintBottom_toBottomOf="@+id/release_poster"
+            app:layout_constraintEnd_toEndOf="@+id/release_poster"
+            app:layout_constraintStart_toStartOf="@+id/release_poster"
+            app:layout_constraintTop_toTopOf="@+id/release_poster"
+            app:srcCompat="@drawable/ic_release_round_play" />
+
+        <View
+            android:id="@+id/release_view_second"
+            android:layout_width="0dp"
+            android:layout_height="2dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="16.7dp"
+            android:layout_marginEnd="16dp"
+            android:background="@color/light_gray"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/release_poster" />
+
+        <TextView
+            android:id="@+id/release_information"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="12dp"
+            android:layout_marginEnd="16dp"
+            android:text="@string/info_release"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/release_view_second" />
+
+        <TextView
+            android:id="@+id/release_duration"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="16dp"
+            android:text="@string/duration_release"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/release_information" />
+
+        <TextView
+            android:id="@+id/release_duration_locale"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="2dp"
+            android:text="@string/duration_test"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/release_duration" />
+
+        <TextView
+            android:id="@+id/release_director"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="16dp"
+            android:text="@string/director_release"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/release_duration_locale" />
+
+        <TextView
+            android:id="@+id/release_director_locale"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="2dp"
+            android:text="@string/directors_test"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/release_director" />
+
+        <TextView
+            android:id="@+id/release_starring"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="16dp"
+            android:text="@string/starring_release"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/release_director_locale" />
+
+        <TextView
+            android:id="@+id/release_starring_locale"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginEnd="16dp"
+            android:layout_marginTop="2dp"
+            android:text="@string/cast_test"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/release_starring" />
+
+        <TextView
+            android:id="@+id/release_story"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="16dp"
+            android:text="@string/story_release"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/release_starring_locale" />
+
+        <TextView
+            android:id="@+id/release_story_locale"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginEnd="16dp"
+            android:layout_marginTop="2dp"
+            android:text="@string/story_test"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/release_story" />
+
+        <TextView
+            android:id="@+id/release_moviesearch"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="16dp"
+            android:text="@string/moviesearch_release"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/release_story_locale" />
+
+        <TextView
+            android:id="@+id/release_moviesearch_locale"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="2dp"
+            android:text="@string/rating_test"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/release_moviesearch" />
+
+        <TextView
+            android:id="@+id/release_IMDb"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="16dp"
+            android:text="@string/IMDb_release"
+            app:layout_constraintStart_toEndOf="@+id/release_moviesearch"
+            app:layout_constraintTop_toBottomOf="@+id/release_story_locale" />
+
+        <TextView
+            android:id="@+id/release_IMDb_locale"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="2dp"
+            android:text="@string/IMDb_test"
+            app:layout_constraintStart_toEndOf="@+id/release_moviesearch"
+            app:layout_constraintTop_toBottomOf="@+id/release_IMDb" />
+
+        <View
+            android:id="@+id/release_view_third"
+            android:layout_width="0dp"
+            android:layout_height="1dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="16.7dp"
+            android:layout_marginEnd="16dp"
+            android:background="@color/light_gray"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/release_IMDb_locale" />
+
+        <TextView
+            android:id="@+id/release_stills"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="12dp"
+            android:text="@string/stills_release"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/release_view_third" />
+
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 </ScrollView>
