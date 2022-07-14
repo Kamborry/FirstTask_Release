@@ -41,8 +41,8 @@ class MainPageFragment : Fragment() {
     }
 
     private fun showReleaseFragment(){
-        childFragmentManager.beginTransaction()
-                .replace(R.id.container, ReleaseFragment.newInstance())
+        parentFragmentManager.beginTransaction()
+                .replace(R.id.activity_container, ReleaseFragment.newInstance())
                 .commitNow()
     }
 
