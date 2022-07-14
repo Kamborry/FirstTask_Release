@@ -8,7 +8,7 @@
         <!-- Secondary brand color. -->
         <item name="colorSecondary">@color/gray</item>
         <item name="colorSecondaryVariant">@color/dark_gray</item>
-        <item name="colorOnSecondary">@color/white</item>
+        <item name="colorOnSecondary">@color/light_gray</item>
         <!-- Status bar color. -->
         <item name="android:statusBarColor" >?attr/colorPrimaryVariant</item>
         <!-- Customize your theme here. -->
@@ -18,4 +18,84 @@
         <item name="colorButtonNormal">@color/black</item>
         <item name="colorControlHighlight">@color/gray</item>
     </style>
+
+    <style name="Base.TextAppearance.OKUI.Regular" parent="android:TextAppearance">
+        <item name="android:textStyle">normal</item>
+        <item name="fontWeight">400</item>
+        <item name="android:textColor">@color/black</item>
+    </style>
+
+    <style name="Base.TextAppearance.OKUI.Medium" parent="android:TextAppearance">
+        <item name="android:textStyle">normal</item>
+        <item name="fontWeight">700</item>
+        <item name="android:textColor">@color/black</item>
+    </style>
+
+    <style name="Base.TextAppearance.OKUI.LargeTitle" parent="Base.TextAppearance.OKUI.Medium">
+        <item name="android:textSize">34sp</item>
+    </style>
+
+    <style name="Base.TextAppearance.OKUI.Title1" parent="Base.TextAppearance.OKUI.Medium">
+        <item name="android:textSize">28sp</item>
+    </style>
+
+    <style name="Base.TextAppearance.OKUI.Title2" parent="Base.TextAppearance.OKUI.Medium">
+        <item name="android:textSize">22sp</item>
+    </style>
+
+    <style name="Base.TextAppearance.OKUI.Title3" parent="Base.TextAppearance.OKUI.Medium">
+        <item name="android:textSize">20sp</item>
+    </style>
+
+    <style name="Base.TextAppearance.OKUI.Headline" parent="Base.TextAppearance.OKUI.Medium">
+        <item name="android:textSize">17sp</item>
+    </style>
+
+    <style name="Base.TextAppearance.OKUI.Body" parent="Base.TextAppearance.OKUI.Regular">
+        <item name="android:textSize">17sp</item>
+    </style>
+
+    <style name="Base.TextAppearance.OKUI.Callout" parent="Base.TextAppearance.OKUI.Regular">
+        <item name="android:textSize">16sp</item>
+    </style>
+
+    <style name="Base.TextAppearance.OKUI.Subhead" parent="Base.TextAppearance.OKUI.Regular">
+        <item name="android:textSize">15sp</item>
+    </style>
+
+    <style name="Base.TextAppearance.OKUI.Footnote" parent="Base.TextAppearance.OKUI.Regular">
+        <item name="android:textSize">13sp</item>
+    </style>
+
+    <style name="Base.TextAppearance.OKUI.Caption1" parent="Base.TextAppearance.OKUI.Regular">
+        <item name="android:textSize">12sp</item>
+        <item name="android:textColor">@color/light_gray</item>
+    </style>
+
+    <style name="Base.TextAppearance.OKUI.Caption2" parent="Base.TextAppearance.OKUI.Regular">
+        <item name="android:textSize">11sp</item>
+    </style>
+
+    <style name="TextAppearance.OKUI.LargeTitle" parent="Base.TextAppearance.OKUI.LargeTitle" />
+
+    <style name="TextAppearance.OKUI.Title1" parent="Base.TextAppearance.OKUI.Title1" />
+
+    <style name="TextAppearance.OKUI.Title2" parent="Base.TextAppearance.OKUI.Title2" />
+
+    <style name="TextAppearance.OKUI.Title3" parent="Base.TextAppearance.OKUI.Title3" />
+
+    <style name="TextAppearance.OKUI.Headline" parent="Base.TextAppearance.OKUI.Headline" />
+
+    <style name="TextAppearance.OKUI.Body" parent="Base.TextAppearance.OKUI.Body" />
+
+    <style name="TextAppearance.OKUI.Callout" parent="Base.TextAppearance.OKUI.Callout" />
+
+    <style name="TextAppearance.OKUI.Subhead" parent="Base.TextAppearance.OKUI.Subhead" />
+
+    <style name="TextAppearance.OKUI.Footnote" parent="Base.TextAppearance.OKUI.Footnote" />
+
+    <style name="TextAppearance.OKUI.Caption1" parent="Base.TextAppearance.OKUI.Caption1" />
+
+    <style name="TextAppearance.OKUI.Caption2" parent="Base.TextAppearance.OKUI.Caption2" />
+
 </resources>
