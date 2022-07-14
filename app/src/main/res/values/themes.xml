@@ -45,6 +45,7 @@
 
     <style name="Base.TextAppearance.OKUI.Title3" parent="Base.TextAppearance.OKUI.Medium">
         <item name="android:textSize">20sp</item>
+        <item name="android:textStyle">bold</item>
     </style>
 
     <style name="Base.TextAppearance.OKUI.Headline" parent="Base.TextAppearance.OKUI.Medium">
