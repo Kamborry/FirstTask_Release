@@ -31,7 +31,7 @@ fun getMockRelease() = Release(
     ),
     premiere = "2022-07-13",
     countries = listOf(
-        "сша"
+        "США"
     ),
     posterUrl = "https://s1ru1.kinoplan24.ru/767/6f32b2e2ffc8f4/7651.jpg?mode=fit&width=512&height=512",
     videoThumbnailUrl = "https://s2ru1.kinoplan24.ru/497/3c80f82222e5cc/thumb.jpg",

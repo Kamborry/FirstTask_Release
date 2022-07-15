@@ -43,7 +43,7 @@
             android:paddingTop="1dp"
             android:paddingEnd="4dp"
             android:paddingBottom="1dp"
-            android:text="@string/age_rating_test"
+            tools:text="@string/age_rating_test"
             app:layout_constraintStart_toEndOf="@+id/image_release_preview"
             app:layout_constraintTop_toBottomOf="@+id/release_toolbar" />
 
@@ -59,7 +59,8 @@
             android:paddingTop="1dp"
             android:paddingEnd="4dp"
             android:paddingBottom="1dp"
-            android:text="@string/genres_test"
+            tools:text="@string/genres_test"
+            android:textAllCaps = "true"
             app:layout_constraintStart_toEndOf="@id/release_age_rating"
             app:layout_constraintTop_toBottomOf="@id/release_toolbar" />
 
@@ -81,7 +82,7 @@
             android:layout_height="wrap_content"
             android:layout_marginStart="16dp"
             android:layout_marginTop="2dp"
-            android:text="@string/premiere_test"
+            tools:text="@string/premiere_test"
             app:layout_constraintStart_toEndOf="@+id/image_release_preview"
             app:layout_constraintTop_toBottomOf="@+id/release_premiere" />
 
@@ -103,7 +104,7 @@
             android:layout_height="wrap_content"
             android:layout_marginStart="16dp"
             android:layout_marginTop="2dp"
-            android:text="@string/countries_test"
+            tools:text="@string/countries_test"
             app:layout_constraintStart_toEndOf="@+id/image_release_preview"
             app:layout_constraintTop_toBottomOf="@+id/release_country" />
 
@@ -199,7 +200,7 @@
             android:layout_height="wrap_content"
             android:layout_marginStart="16dp"
             android:layout_marginTop="2dp"
-            android:text="@string/duration_test"
+            tools:text="@string/duration_test"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/release_duration" />
 
@@ -221,7 +222,7 @@
             android:layout_height="wrap_content"
             android:layout_marginStart="16dp"
             android:layout_marginTop="2dp"
-            android:text="@string/directors_test"
+            tools:text="@string/directors_test"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/release_director" />
 
@@ -244,7 +245,7 @@
             android:layout_marginStart="16dp"
             android:layout_marginTop="2dp"
             android:layout_marginEnd="16dp"
-            android:text="@string/cast_test"
+            tools:text="@string/cast_test"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/release_starring" />
 
@@ -267,7 +268,7 @@
             android:layout_marginStart="16dp"
             android:layout_marginTop="2dp"
             android:layout_marginEnd="16dp"
-            android:text="@string/story_test"
+            tools:text="@string/story_test"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/release_story" />
 
