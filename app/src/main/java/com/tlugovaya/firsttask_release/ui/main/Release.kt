@@ -1,10 +1,14 @@
 package com.tlugovaya.firsttask_release.ui.main
 
+import org.threeten.bp.LocalDate
+import org.threeten.bp.format.DateTimeFormatter
+
 //todo Повторить экран релиза (кроме тулбара с картинкой, списка кадров и рейтинга)
 // при клике на кнопку "поделиться", "купить билеты", "трейллер" отображать
 // алерт диалоги с соотвествующим текстом
-// для получения данных - используй getMockRelease()
 // Для отображения картинок использовать Glide/Picasso
+
+// для получения данных - используй getMockRelease()
 // Для работ с датами использовать ThreeTenAbp
 
 data class Release(
@@ -22,6 +26,17 @@ data class Release(
     val story: String
 )
 
+fun filmDuration(time: Long): String {
+    val hours = time / 60
+    val minutes = time % 60
+    return "$hours ч. $minutes мин."
+}
+
+fun dateTimeFormatter(premiere: String): String {
+    val formatter = DateTimeFormatter.ofPattern("dd MMMM yyyy")
+    val localDate = LocalDate.parse(premiere, DateTimeFormatter.ofPattern("yyyy-MM-dd"))
+    return localDate.format(formatter)
+}
 
 fun getMockRelease() = Release(
     title = "Неоновый демон",

@@ -5,9 +5,13 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
+import androidx.fragment.app.viewModels
+import androidx.lifecycle.ViewModelProvider
+import com.jakewharton.threetenabp.AndroidThreeTen
 import com.tlugovaya.firsttask_release.R
 import com.tlugovaya.firsttask_release.databinding.FragmentMainPageBinding
 import com.tlugovaya.firsttask_release.databinding.FragmentReleaseBinding
+import org.threeten.bp.format.DateTimeFormatter
 
 class ReleaseFragment : Fragment() {
 
@@ -15,7 +19,7 @@ class ReleaseFragment : Fragment() {
         fun newInstance() = ReleaseFragment()
     }
 
-    private lateinit var viewModel: ReleaseViewModel
+    private val viewModel: ReleaseViewModel by viewModels()
     private lateinit var binding: FragmentReleaseBinding
 
     override fun onCreateView(
@@ -23,19 +27,10 @@ class ReleaseFragment : Fragment() {
         container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View {
+        //Инициализируем биндинг.
         binding = FragmentReleaseBinding.inflate(inflater, container, false)
-        val release = getMockRelease()
-        with(binding) {
-            releaseAgeRating.text = release.ageRating
-            genres.text = release.genres[0]
-            releasePremiereDate.text = release.premiere
-            releaseCountryLocale.text = release.countries.joinToString()
-            releaseDurationLocale.text = release.duration.toString()
-            releaseDirectorLocale.text = release.directors.joinToString()
-            releaseStarringLocale.text = release.cast.joinToString()
-            releaseStoryLocale.text = release.story
-        }
-
+        //Заполняем данными ViewModel.
+        viewModel.fillingWithDataFromMock(binding)
         return binding.root
     }
 
