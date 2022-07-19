@@ -6,8 +6,7 @@ import com.tlugovaya.firsttask_release.databinding.FragmentReleaseBinding
 
 class ReleaseViewModel : ViewModel() {
 
-    fun fillingWithDataFromMock (binding: FragmentReleaseBinding){
-        val release = getMockRelease()
+    fun fillingWithDataFromMock (binding: FragmentReleaseBinding, release: Release){
         with(binding) {
             releaseAgeRating.text = release.ageRating
             genres.text = release.genres[0]

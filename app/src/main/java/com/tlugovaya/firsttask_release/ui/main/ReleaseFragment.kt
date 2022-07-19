@@ -16,6 +16,7 @@ class ReleaseFragment : Fragment() {
 
     private val viewModel: ReleaseViewModel by viewModels()
     private lateinit var binding: FragmentReleaseBinding
+    private val release = getMockRelease()
 
     override fun onCreateView(
         inflater: LayoutInflater,
@@ -25,7 +26,13 @@ class ReleaseFragment : Fragment() {
         //Инициализируем биндинг.
         binding = FragmentReleaseBinding.inflate(inflater, container, false)
         //Заполняем данными ViewModel.
-        viewModel.fillingWithDataFromMock(binding)
+        viewModel.fillingWithDataFromMock(binding, release)
+
+        with(PicassoModule()){
+            downloadImageForPreview(binding, release)
+            downloadImageForPoster(binding, release)
+        }
+
         return binding.root
     }
 
