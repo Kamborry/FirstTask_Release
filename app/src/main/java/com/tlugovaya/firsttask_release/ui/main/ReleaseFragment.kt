@@ -14,7 +14,7 @@ class ReleaseFragment : Fragment() {
         fun newInstance() = ReleaseFragment()
     }
 
-    private val viewModel: ReleaseViewModel by viewModels()
+    //private val viewModel: ReleaseViewModel by viewModels()
     private lateinit var binding: FragmentReleaseBinding
     private val release = getMockRelease()
 
@@ -25,16 +25,26 @@ class ReleaseFragment : Fragment() {
     ): View {
         //Инициализируем биндинг.
         binding = FragmentReleaseBinding.inflate(inflater, container, false)
-        //Заполняем данными ViewModel.
-        viewModel.fillingWithDataFromMock(binding, release)
 
-        with(PicassoModule()){
-            downloadImageForPreview(binding, release)
-            downloadImageForPoster(binding, release)
+        with(binding) {
+            //Заполняем данными binding.
+            fillingWithDataFromMock(this, release)
+            imageReleasePreview.downloadImage(release.posterUrl)
+            releasePoster.downloadImage(release.videoThumbnailUrl)
         }
-
         return binding.root
     }
 
-
+    private fun fillingWithDataFromMock(binding: FragmentReleaseBinding, release: Release) {
+        with(binding) {
+            releaseAgeRating.text = release.ageRating
+            genres.text = release.genres[0]
+            releasePremiereDate.text = dateTimeFormatter(release.premiere)
+            releaseCountryLocale.text = release.countries.joinToString()
+            releaseDurationLocale.text = filmDuration(release.duration)
+            releaseDirectorLocale.text = release.directors.joinToString()
+            releaseStarringLocale.text = release.cast.joinToString()
+            releaseStoryLocale.text = release.story
+        }
+    }
 }
