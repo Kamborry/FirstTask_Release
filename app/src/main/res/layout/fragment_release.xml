@@ -18,15 +18,21 @@
             <com.google.android.material.appbar.CollapsingToolbarLayout
                 android:layout_width="match_parent"
                 android:layout_height="224dp"
-                app:layout_scrollFlags="scroll">
+                app:layout_scrollFlags="scroll"
+                app:contentScrim="@color/almost_black"
+                >
 
                 <ImageView
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:src="@drawable/ic_release_toolbar"
-                    android:scaleType="centerCrop">
+                    android:scaleType="centerCrop"/>
+                
+                <androidx.appcompat.widget.Toolbar
+                    android:id="@+id/toolbar_release"
+                    android:layout_width="match_parent"
+                    android:layout_height="?attr/actionBarSize" />
 
-                </ImageView>
             </com.google.android.material.appbar.CollapsingToolbarLayout>
         </com.google.android.material.appbar.AppBarLayout>
 
