@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
-<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/scrollable_release"
+    android:id="@+id/scrollable_release1"
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
@@ -35,9 +35,9 @@
             android:paddingTop="1dp"
             android:paddingEnd="4dp"
             android:paddingBottom="1dp"
-            tools:text="@string/age_rating_test"
             app:layout_constraintStart_toEndOf="@+id/image_release_preview"
-            app:layout_constraintTop_toTopOf="parent" />
+            app:layout_constraintTop_toTopOf="parent"
+            tools:text="@string/age_rating_test" />
 
         <TextView
             android:id="@+id/genres"
@@ -51,10 +51,10 @@
             android:paddingTop="1dp"
             android:paddingEnd="4dp"
             android:paddingBottom="1dp"
-            tools:text="@string/genres_test"
-            android:textAllCaps = "true"
+            android:textAllCaps="true"
             app:layout_constraintStart_toEndOf="@id/release_age_rating"
-            app:layout_constraintTop_toTopOf="parent" />
+            app:layout_constraintTop_toTopOf="parent"
+            tools:text="@string/genres_test" />
 
         <TextView
             android:id="@+id/release_premiere"
@@ -74,9 +74,9 @@
             android:layout_height="wrap_content"
             android:layout_marginStart="16dp"
             android:layout_marginTop="2dp"
-            tools:text="@string/premiere_test"
             app:layout_constraintStart_toEndOf="@+id/image_release_preview"
-            app:layout_constraintTop_toBottomOf="@+id/release_premiere" />
+            app:layout_constraintTop_toBottomOf="@+id/release_premiere"
+            tools:text="@string/premiere_test" />
 
         <TextView
             android:id="@+id/release_country"
@@ -96,9 +96,9 @@
             android:layout_height="wrap_content"
             android:layout_marginStart="16dp"
             android:layout_marginTop="2dp"
-            tools:text="@string/countries_test"
             app:layout_constraintStart_toEndOf="@+id/image_release_preview"
-            app:layout_constraintTop_toBottomOf="@+id/release_country" />
+            app:layout_constraintTop_toBottomOf="@+id/release_country"
+            tools:text="@string/countries_test" />
 
         <View
             android:id="@+id/release_view_first"
@@ -192,9 +192,9 @@
             android:layout_height="wrap_content"
             android:layout_marginStart="16dp"
             android:layout_marginTop="2dp"
-            tools:text="@string/duration_test"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/release_duration" />
+            app:layout_constraintTop_toBottomOf="@+id/release_duration"
+            tools:text="@string/duration_test" />
 
         <TextView
             android:id="@+id/release_director"
@@ -214,9 +214,9 @@
             android:layout_height="wrap_content"
             android:layout_marginStart="16dp"
             android:layout_marginTop="2dp"
-            tools:text="@string/directors_test"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/release_director" />
+            app:layout_constraintTop_toBottomOf="@+id/release_director"
+            tools:text="@string/directors_test" />
 
         <TextView
             android:id="@+id/release_starring"
@@ -237,9 +237,9 @@
             android:layout_marginStart="16dp"
             android:layout_marginTop="2dp"
             android:layout_marginEnd="16dp"
-            tools:text="@string/cast_test"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/release_starring" />
+            app:layout_constraintTop_toBottomOf="@+id/release_starring"
+            tools:text="@string/cast_test" />
 
         <TextView
             android:id="@+id/release_story"
@@ -260,9 +260,9 @@
             android:layout_marginStart="16dp"
             android:layout_marginTop="2dp"
             android:layout_marginEnd="16dp"
-            tools:text="@string/story_test"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/release_story" />
+            app:layout_constraintTop_toBottomOf="@+id/release_story"
+            tools:text="@string/story_test" />
 
         <TextView
             android:id="@+id/release_moviesearch"
@@ -312,6 +312,5 @@
             android:text="@string/IMDb_test"
             app:layout_constraintStart_toEndOf="@+id/guideline"
             app:layout_constraintTop_toBottomOf="@+id/release_IMDb" />
-
     </androidx.constraintlayout.widget.ConstraintLayout>
-</ScrollView>
+</androidx.core.widget.NestedScrollView>
