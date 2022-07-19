@@ -10,6 +10,7 @@ fun ImageView.downloadImage(
     @DrawableRes drawableIdPlaceholder: Int = R.drawable.ic_placeholder,
     @DrawableRes drawableIdError: Int = R.drawable.ic_placeholder
 ) {
+    clipToOutline = true
     Picasso.get().load(url)
         .placeholder(drawableIdPlaceholder)
         .error(drawableIdError)

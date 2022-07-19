@@ -6,8 +6,8 @@ import org.threeten.bp.format.DateTimeFormatter
 //todo Повторить экран релиза (кроме тулбара с картинкой, списка кадров и рейтинга)
 // при клике на кнопку "поделиться", "купить билеты", "трейллер" отображать
 // алерт диалоги с соотвествующим текстом
-// Для отображения картинок использовать Glide/Picasso
 
+// Для отображения картинок использовать Glide/Picasso
 // для получения данных - используй getMockRelease()
 // Для работ с датами использовать ThreeTenAbp
 
@@ -50,7 +50,7 @@ fun getMockRelease() = Release(
         "США"
     ),
     posterUrl = "https://s1ru1.kinoplan24.ru/767/6f32b2e2ffc8f4/7651.jpg?mode=fit&width=512&height=512",
-    videoThumbnailUrl = "https://images.kinorium.com/movie/shot/604592/h280_49440819.jpg",
+    videoThumbnailUrl = "https://www.kinogallery.com/img/trailers/0780372001467030285.jpg",
     duration = 128L,
     directors = listOf(
         "Мартин Стюрд"
