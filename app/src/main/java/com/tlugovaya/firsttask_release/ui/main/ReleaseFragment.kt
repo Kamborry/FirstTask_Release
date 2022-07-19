@@ -6,6 +6,7 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.viewModels
+import com.tlugovaya.firsttask_release.R
 import com.tlugovaya.firsttask_release.databinding.FragmentReleaseBinding
 
 class ReleaseFragment : Fragment() {
@@ -29,6 +30,10 @@ class ReleaseFragment : Fragment() {
         with(binding) {
             //Заполняем данными binding.
             fillingWithDataFromMock(this, release)
+            toolbarImageRelease.downloadImage(
+                release.screenShorts.first(),
+                R.drawable.ic_title_placeholder
+            )
             release.posterUrl?.let { imageReleasePreview.downloadImage(it) }
             releasePoster.downloadImage(release.videoThumbnailUrl)
         }
@@ -37,6 +42,7 @@ class ReleaseFragment : Fragment() {
 
     private fun fillingWithDataFromMock(binding: FragmentReleaseBinding, release: Release) {
         with(binding) {
+            toolbar.title = release.title
             releaseAgeRating.text = release.ageRating
             genres.text = release.genres[0]
             releasePremiereDate.text = dateTimeFormatter(release.premiere)
