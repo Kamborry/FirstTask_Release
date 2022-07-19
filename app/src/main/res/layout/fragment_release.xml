@@ -4,34 +4,14 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/scrollable_release"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:background="@color/white">
+    android:layout_height="match_parent">
 
-    <androidx.coordinatorlayout.widget.CoordinatorLayout
+    <androidx.constraintlayout.widget.ConstraintLayout
         android:id="@+id/release_main_container"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:paddingBottom="16dp"
         tools:context=".ui.main.MainPageFragment">
-
-        <com.google.android.material.appbar.AppBarLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content">
-
-            <com.google.android.material.appbar.CollapsingToolbarLayout
-                android:layout_width="match_parent"
-                android:layout_height="224dp">
-                
-            </com.google.android.material.appbar.CollapsingToolbarLayout>
-
-        </com.google.android.material.appbar.AppBarLayout>
-
-        <include
-            android:id="@+id/release_toolbar"
-            layout="@layout/toolbar_release"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
 
         <ImageView
             android:id="@+id/image_release_preview"
@@ -40,7 +20,7 @@
             android:layout_marginStart="16dp"
             android:layout_marginTop="16dp"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/release_toolbar"
+            app:layout_constraintTop_toTopOf="parent"
             app:srcCompat="@drawable/ic_release_preview" />
 
         <TextView
@@ -57,7 +37,7 @@
             android:paddingBottom="1dp"
             tools:text="@string/age_rating_test"
             app:layout_constraintStart_toEndOf="@+id/image_release_preview"
-            app:layout_constraintTop_toBottomOf="@+id/release_toolbar" />
+            app:layout_constraintTop_toTopOf="parent" />
 
         <TextView
             android:id="@+id/genres"
@@ -74,7 +54,7 @@
             tools:text="@string/genres_test"
             android:textAllCaps = "true"
             app:layout_constraintStart_toEndOf="@id/release_age_rating"
-            app:layout_constraintTop_toBottomOf="@id/release_toolbar" />
+            app:layout_constraintTop_toTopOf="parent" />
 
         <TextView
             android:id="@+id/release_premiere"
@@ -130,7 +110,7 @@
             android:background="@color/light_gray"
             app:layout_constraintLeft_toLeftOf="parent"
             app:layout_constraintRight_toRightOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/release_country_locale" />
+            app:layout_constraintTop_toBottomOf="@+id/image_release_preview" />
 
         <TextView
             android:id="@+id/release_trailer"
@@ -333,5 +313,5 @@
             app:layout_constraintStart_toEndOf="@+id/guideline"
             app:layout_constraintTop_toBottomOf="@+id/release_IMDb" />
 
-    </androidx.coordinatorlayout.widget.CoordinatorLayout>
+    </androidx.constraintlayout.widget.ConstraintLayout>
 </ScrollView>

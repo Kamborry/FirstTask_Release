@@ -6,12 +6,7 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.viewModels
-import androidx.lifecycle.ViewModelProvider
-import com.jakewharton.threetenabp.AndroidThreeTen
-import com.tlugovaya.firsttask_release.R
-import com.tlugovaya.firsttask_release.databinding.FragmentMainPageBinding
 import com.tlugovaya.firsttask_release.databinding.FragmentReleaseBinding
-import org.threeten.bp.format.DateTimeFormatter
 
 class ReleaseFragment : Fragment() {
 
