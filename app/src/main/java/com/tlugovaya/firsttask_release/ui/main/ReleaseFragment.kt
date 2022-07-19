@@ -29,7 +29,7 @@ class ReleaseFragment : Fragment() {
         with(binding) {
             //Заполняем данными binding.
             fillingWithDataFromMock(this, release)
-            imageReleasePreview.downloadImage(release.posterUrl)
+            release.posterUrl?.let { imageReleasePreview.downloadImage(it) }
             releasePoster.downloadImage(release.videoThumbnailUrl)
         }
         return binding.root
@@ -41,7 +41,7 @@ class ReleaseFragment : Fragment() {
             genres.text = release.genres[0]
             releasePremiereDate.text = dateTimeFormatter(release.premiere)
             releaseCountryLocale.text = release.countries.joinToString()
-            releaseDurationLocale.text = filmDuration(release.duration)
+            releaseDurationLocale.text = release.duration?.let { filmDuration(it) }
             releaseDirectorLocale.text = release.directors.joinToString()
             releaseStarringLocale.text = release.cast.joinToString()
             releaseStoryLocale.text = release.story
