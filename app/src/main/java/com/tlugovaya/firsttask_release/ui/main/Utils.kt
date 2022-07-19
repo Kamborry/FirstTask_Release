@@ -10,7 +10,7 @@ class PicassoModule {
     private lateinit var imageView: ImageView
 
     fun downloadImageForToolbar(binding: FragmentReleaseBinding, release: Release){
-        imageView = binding.imageReleaseToolbar
+        //imageView = binding.imageReleaseToolbar
         Picasso.get().load("")
             .placeholder(R.drawable.ic_placeholder_toolbar)
             .error(R.drawable.ic_placeholder_toolbar)
