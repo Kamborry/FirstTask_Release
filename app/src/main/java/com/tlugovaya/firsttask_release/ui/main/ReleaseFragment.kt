@@ -1,10 +1,9 @@
 package com.tlugovaya.firsttask_release.ui.main
 
-import android.app.Activity
+import android.app.ProgressDialog.show
 import android.os.Bundle
-import android.view.LayoutInflater
-import android.view.View
-import android.view.ViewGroup
+import android.view.*
+import android.widget.Toast
 import androidx.appcompat.widget.Toolbar
 import androidx.fragment.app.Fragment
 import com.tlugovaya.firsttask_release.R
@@ -20,6 +19,7 @@ class ReleaseFragment : Fragment() {
     //private val viewModel: ReleaseViewModel by viewModels()
     private lateinit var binding: FragmentReleaseBinding
     private val release = getMockRelease()
+    var shareCall: MenuItem? = null
 
     override fun onCreateView(
         inflater: LayoutInflater,
@@ -41,8 +41,12 @@ class ReleaseFragment : Fragment() {
         }
 
         val toolbar: Toolbar = binding.toolbar
-        toolbar.setNavigationIcon(R.drawable.ic_back_button)
-        toolbar.setNavigationOnClickListener { activity!!.showMainFragment()}
+        toolbar.inflateMenu(R.menu.menu_release)
+        toolbar.setNavigationOnClickListener {
+            activity?.supportFragmentManager?.beginTransaction()?.remove(this)?.commit()
+        }
+
+        setHasOptionsMenu(true)
 
         return binding.root
     }
@@ -61,9 +65,21 @@ class ReleaseFragment : Fragment() {
         }
     }
 
-    private fun Activity.showMainFragment() {
-        parentFragmentManager.beginTransaction()
-            .replace(R.id.activity_container, MainPageFragment.newInstance())
-            .commitNow()
+
+    override fun onOptionsItemSelected(item: MenuItem): Boolean {
+        return when(item.itemId) {
+            R.id.share -> {
+            Toast.makeText(requireContext(),"Share", Toast.LENGTH_SHORT).show()
+            true
+        }
+        else -> super.onOptionsItemSelected(item)
+        }
     }
+
+    override fun onCreateOptionsMenu(menu: Menu, inflater: MenuInflater) {
+        inflater.inflate(R.menu.menu_release, menu)
+        shareCall = menu.findItem(R.id.share)
+        super.onCreateOptionsMenu(menu, inflater)
+    }
+
 }

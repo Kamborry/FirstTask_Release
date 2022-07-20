@@ -2,6 +2,8 @@ package com.tlugovaya.firsttask_release
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.view.Menu
+import android.view.MenuItem
 import com.tlugovaya.firsttask_release.ui.main.MainPageFragment
 
 class MainActivity : AppCompatActivity() {

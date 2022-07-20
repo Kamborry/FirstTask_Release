@@ -16,7 +16,6 @@ class MainPageFragment : Fragment() {
         fun newInstance() = MainPageFragment()
     }
 
-    //private lateinit var viewModel: MainPageViewModel
     private var binding: FragmentMainPageBinding? = null
 
     override fun onCreateView(
@@ -42,10 +41,7 @@ class MainPageFragment : Fragment() {
 
     private fun showReleaseFragment(){
         parentFragmentManager.beginTransaction()
-                .replace(R.id.activity_container, ReleaseFragment.newInstance())
+                .add(R.id.activity_container, ReleaseFragment.newInstance())
                 .commitNow()
     }
-
-    //val toolbar: Toolbar = findViewById(R.layout.toolbar_release)
-    //setSupportActionBar(toolbar)
 }
