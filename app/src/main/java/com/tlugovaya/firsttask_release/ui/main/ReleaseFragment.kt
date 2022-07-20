@@ -1,10 +1,10 @@
 package com.tlugovaya.firsttask_release.ui.main
 
+import android.app.Activity
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import androidx.annotation.DrawableRes
 import androidx.appcompat.widget.Toolbar
 import androidx.fragment.app.Fragment
 import com.tlugovaya.firsttask_release.R
@@ -42,7 +42,7 @@ class ReleaseFragment : Fragment() {
 
         val toolbar: Toolbar = binding.toolbar
         toolbar.setNavigationIcon(R.drawable.ic_back_button)
-        toolbar.setNavigationOnClickListener { activity!!.onBackPressed()}
+        toolbar.setNavigationOnClickListener { activity!!.showMainFragment()}
 
         return binding.root
     }
@@ -61,7 +61,7 @@ class ReleaseFragment : Fragment() {
         }
     }
 
-    private fun showMainFragment() {
+    private fun Activity.showMainFragment() {
         parentFragmentManager.beginTransaction()
             .replace(R.id.activity_container, MainPageFragment.newInstance())
             .commitNow()
