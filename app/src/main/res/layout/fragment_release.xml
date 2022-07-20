@@ -17,7 +17,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="224dp"
                 app:contentScrim="@color/almost_black"
-                app:layout_scrollFlags="scroll">
+                app:layout_scrollFlags="scroll|exitUntilCollapsed">
 
                 <ImageView
                     android:id="@+id/toolbar_image_release"
@@ -32,10 +32,11 @@
                     android:layout_height="?attr/actionBarSize"
                     tools:title="Веном" />
 
+
             </com.google.android.material.appbar.CollapsingToolbarLayout>
 
         </com.google.android.material.appbar.AppBarLayout>
-    
+
         <androidx.core.widget.NestedScrollView
             android:id="@+id/scrollable_release"
             android:layout_width="match_parent"

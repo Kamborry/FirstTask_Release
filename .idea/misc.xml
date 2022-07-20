@@ -3,6 +3,7 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="../../../../layout/custom_preview.xml" value="0.11553985872855702" />
         <entry key="..\:/Users/norm2/AndroidStudioProjects/FirstTask_Release/app/src/main/res/drawable/ic_placeholder.xml" value="0.1" />
         <entry key="..\:/Users/norm2/AndroidStudioProjects/FirstTask_Release/app/src/main/res/drawable/ic_release_round_play.xml" value="0.171" />
         <entry key="..\:/Users/norm2/AndroidStudioProjects/FirstTask_Release/app/src/main/res/drawable/ic_title_placeholder.xml" value="0.1" />
@@ -31,6 +32,7 @@
         <entry key="app/src/main/res/layout/toolbar.xml" value="0.33" />
         <entry key="app/src/main/res/layout/toolbar_main_page.xml" value="0.3307291666666667" />
         <entry key="app/src/main/res/layout/toolbar_release.xml" value="0.33177083333333335" />
+        <entry key="app/src/main/res/menu/menu_release.xml" value="0.3307291666666667" />
       </map>
     </option>
   </component>

@@ -19,6 +19,8 @@
         <item name="windowNoTitle">true</item>
         <item name="android:textColorPrimary">@color/white</item>
         <item name="buttonStyle">@style/BuyButton</item>
+
+
     </style>
 
     <style name="BlackButton" parent="@style/Widget.AppCompat.Button.Colored">

@@ -4,10 +4,12 @@ import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.annotation.DrawableRes
+import androidx.appcompat.widget.Toolbar
 import androidx.fragment.app.Fragment
-import androidx.fragment.app.viewModels
 import com.tlugovaya.firsttask_release.R
 import com.tlugovaya.firsttask_release.databinding.FragmentReleaseBinding
+
 
 class ReleaseFragment : Fragment() {
 
@@ -32,11 +34,16 @@ class ReleaseFragment : Fragment() {
             fillingWithDataFromMock(this, release)
             toolbarImageRelease.downloadImage(
                 release.screenShorts.first(),
-                R.drawable.ic_title_placeholder
+                com.tlugovaya.firsttask_release.R.drawable.ic_title_placeholder
             )
             release.posterUrl?.let { imageReleasePreview.downloadImage(it) }
             releasePoster.downloadImage(release.videoThumbnailUrl)
         }
+
+        val toolbar: Toolbar = binding.toolbar
+        toolbar.setNavigationIcon(R.drawable.ic_back_button)
+        toolbar.setNavigationOnClickListener { activity!!.onBackPressed()}
+
         return binding.root
     }
 
@@ -52,5 +59,11 @@ class ReleaseFragment : Fragment() {
             releaseStarringLocale.text = release.cast.joinToString()
             releaseStoryLocale.text = release.story
         }
+    }
+
+    private fun showMainFragment() {
+        parentFragmentManager.beginTransaction()
+            .replace(R.id.activity_container, MainPageFragment.newInstance())
+            .commitNow()
     }
 }
