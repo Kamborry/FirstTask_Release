@@ -18,12 +18,17 @@
         <item name="windowActionBar">false</item>
         <item name="windowNoTitle">true</item>
         <item name="android:textColorPrimary">@color/white</item>
-        <item name="android:titleTextStyle">@style/Base.TextAppearance.OKUI.Title1</item>
+        <item name="buttonStyle">@style/BuyButton</item>
     </style>
 
     <style name="BlackButton" parent="@style/Widget.AppCompat.Button.Colored">
         <item name="colorButtonNormal">@color/black</item>
         <item name="colorControlHighlight">@color/gray</item>
+    </style>
+
+    <style name="BuyButton" parent="@style/Widget.AppCompat.Button.Colored">
+        <item name="colorButtonNormal">@color/button_payment_color</item>
+        <item name="colorControlHighlight">@color/button_payment_color_unpressed</item>
     </style>
 
     <style name="Base.TextAppearance.OKUI.Regular" parent="android:TextAppearance">
@@ -72,6 +77,7 @@
 
     <style name="Base.TextAppearance.OKUI.Subhead" parent="Base.TextAppearance.OKUI.Regular">
         <item name="android:textSize">15sp</item>
+        <item name="android:textColor">@color/black</item>
     </style>
 
     <style name="Base.TextAppearance.OKUI.Footnote" parent="Base.TextAppearance.OKUI.Regular">

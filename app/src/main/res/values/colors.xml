@@ -21,5 +21,6 @@
     <color name="dark_almost_gray">#8c8c8c</color>
 
     <color name="button_payment_color"> #0A7AFF</color>
+    <color name="button_payment_color_unpressed">#4B97F1</color>
 
 </resources>
