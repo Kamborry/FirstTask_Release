@@ -12,4 +12,6 @@
     <string name="moviesearch_release">Кинопоиск</string>
     <string name="IMDb_release">IMDb</string>
     <string name="stills_release">Кадры</string>
+
+    <string name="to_buy_tickets">Купить билеты</string>
 </resources>

@@ -20,4 +20,6 @@
     <color name="light_almost_gray">#eeeeee</color>
     <color name="dark_almost_gray">#8c8c8c</color>
 
+    <color name="button_payment_color"> #0A7AFF</color>
+
 </resources>
