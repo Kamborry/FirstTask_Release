@@ -18,9 +18,11 @@
         <entry key="app/src/main/res/drawable/ic_buy_button_background.xml" value="0.221" />
         <entry key="app/src/main/res/drawable/ic_launcher_background.xml" value="0.221" />
         <entry key="app/src/main/res/drawable/ic_placeholder.xml" value="0.221" />
+        <entry key="app/src/main/res/drawable/ic_release_round_play.xml" value="0.17" />
         <entry key="app/src/main/res/drawable/ic_round.xml" value="0.219" />
         <entry key="app/src/main/res/drawable/ic_share_button.xml" value="0.127" />
         <entry key="app/src/main/res/drawable/ic_textview_background.xml" value="0.221" />
+        <entry key="app/src/main/res/drawable/ic_title_placeholder.xml" value="0.17" />
         <entry key="app/src/main/res/drawable/rounded_angles.xml" value="0.1335" />
         <entry key="app/src/main/res/drawable/textview_background.xml" value="0.1335" />
         <entry key="app/src/main/res/layout-v23/fragment_release.xml" value="0.25407608695652173" />

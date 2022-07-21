@@ -1,10 +1,11 @@
 package com.tlugovaya.firsttask_release.ui.main
 
-import android.app.ProgressDialog.show
 import android.os.Bundle
-import android.view.*
-import android.widget.Toast
-import androidx.appcompat.widget.Toolbar
+import android.view.LayoutInflater
+import android.view.View
+import android.view.ViewGroup
+import androidx.annotation.StringRes
+import androidx.appcompat.app.AlertDialog
 import androidx.fragment.app.Fragment
 import com.tlugovaya.firsttask_release.R
 import com.tlugovaya.firsttask_release.databinding.FragmentReleaseBinding
@@ -16,10 +17,8 @@ class ReleaseFragment : Fragment() {
         fun newInstance() = ReleaseFragment()
     }
 
-    //private val viewModel: ReleaseViewModel by viewModels()
     private lateinit var binding: FragmentReleaseBinding
     private val release = getMockRelease()
-    var shareCall: MenuItem? = null
 
     override fun onCreateView(
         inflater: LayoutInflater,
@@ -31,55 +30,67 @@ class ReleaseFragment : Fragment() {
 
         with(binding) {
             //Заполняем данными binding.
-            fillingWithDataFromMock(this, release)
+            fillingWithDataFromMock(release)
             toolbarImageRelease.downloadImage(
                 release.screenShorts.first(),
-                com.tlugovaya.firsttask_release.R.drawable.ic_title_placeholder
+                R.drawable.ic_title_placeholder
             )
             release.posterUrl?.let { imageReleasePreview.downloadImage(it) }
             releasePoster.downloadImage(release.videoThumbnailUrl)
         }
 
-        val toolbar: Toolbar = binding.toolbar
-        toolbar.inflateMenu(R.menu.menu_release)
-        toolbar.setNavigationOnClickListener {
-            activity?.supportFragmentManager?.beginTransaction()?.remove(this)?.commit()
+        with(binding.toolbar) {
+            inflateMenu(R.menu.menu_release)
+            menu.findItem(R.id.share).setOnMenuItemClickListener {
+                showInfo(R.string.dialog_share)
+                true
+            }
+            setNavigationOnClickListener {
+                activity?.supportFragmentManager
+                    ?.beginTransaction()
+                    ?.remove(this@ReleaseFragment)
+                    ?.commit()
+            }
         }
 
-        setHasOptionsMenu(true)
+        binding.fillingClickListeners()
 
         return binding.root
     }
 
-    private fun fillingWithDataFromMock(binding: FragmentReleaseBinding, release: Release) {
-        with(binding) {
-            toolbar.title = release.title
-            releaseAgeRating.text = release.ageRating
-            genres.text = release.genres[0]
-            releasePremiereDate.text = dateTimeFormatter(release.premiere)
-            releaseCountryLocale.text = release.countries.joinToString()
-            releaseDurationLocale.text = release.duration?.let { filmDuration(it) }
-            releaseDirectorLocale.text = release.directors.joinToString()
-            releaseStarringLocale.text = release.cast.joinToString()
-            releaseStoryLocale.text = release.story
+    private fun FragmentReleaseBinding.fillingWithDataFromMock(release: Release) {
+        toolbar.title = release.title
+        releaseAgeRating.text = release.ageRating
+        genres.text = release.genres[0]
+        releasePremiereDate.text = dateTimeFormatter(release.premiere)
+        releaseCountryLocale.text = release.countries.joinToString()
+        releaseDurationLocale.text = release.duration?.let { filmDuration(it) }
+        releaseDirectorLocale.text = release.directors.joinToString()
+        releaseStarringLocale.text = release.cast.joinToString()
+        releaseStoryLocale.text = release.story
+    }
+
+    private fun showInfo(
+        @StringRes dialogMessage: Int,
+        @StringRes dialogTitle: Int = R.string.dialog_title
+    ) {
+        AlertDialog.Builder(requireContext())
+            .setTitle(dialogTitle)
+            .setMessage(dialogMessage)
+            .show()
+    }
+
+    private fun View.setClickListenerWithAlertDialog(
+        @StringRes dialogMessageRes: Int,
+        @StringRes dialogTitle: Int = R.string.dialog_title
+    ) {
+        setOnClickListener {
+            showInfo(dialogMessageRes, dialogTitle)
         }
     }
 
-
-    override fun onOptionsItemSelected(item: MenuItem): Boolean {
-        return when(item.itemId) {
-            R.id.share -> {
-            Toast.makeText(requireContext(),"Share", Toast.LENGTH_SHORT).show()
-            true
-        }
-        else -> super.onOptionsItemSelected(item)
-        }
+    private fun FragmentReleaseBinding.fillingClickListeners() {
+        releasePlayImage.setClickListenerWithAlertDialog(R.string.dialog_play)
+        buyButtonRelease.setClickListenerWithAlertDialog(R.string.dialog_buy_tickets)
     }
-
-    override fun onCreateOptionsMenu(menu: Menu, inflater: MenuInflater) {
-        inflater.inflate(R.menu.menu_release, menu)
-        shareCall = menu.findItem(R.id.share)
-        super.onCreateOptionsMenu(menu, inflater)
-    }
-
 }

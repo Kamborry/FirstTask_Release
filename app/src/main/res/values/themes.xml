@@ -17,7 +17,6 @@
     <style name="Theme.FirstTask_Release.NoActionBar">
         <item name="windowActionBar">false</item>
         <item name="windowNoTitle">true</item>
-        <item name="android:textColorPrimary">@color/white</item>
         <item name="buttonStyle">@style/BuyButton</item>
 
 

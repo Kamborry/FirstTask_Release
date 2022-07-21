@@ -14,4 +14,9 @@
     <string name="stills_release">Кадры</string>
 
     <string name="to_buy_tickets">Купить билеты</string>
+
+    <string name="dialog_title">Диалоговое окно</string>
+    <string name="dialog_share">Вы только что нажали на кнопку "Поделиться"</string>
+    <string name="dialog_play">Вы только что нажали на кнопку "Play"</string>
+    <string name="dialog_buy_tickets">Вы только что нажали на кнопку "Купить билеты"</string>
 </resources>

@@ -1,5 +1,4 @@
 <?xml version="1.0" encoding="utf-8"?>
-
 <androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
@@ -18,6 +17,8 @@
             android:layout_width="match_parent"
             android:layout_height="224dp"
             app:contentScrim="@color/almost_black"
+            app:collapsedTitleTextColor="@color/white"
+            app:expandedTitleTextColor="@color/white"
             app:layout_scrollFlags="scroll|exitUntilCollapsed">
 
             <ImageView
@@ -34,7 +35,6 @@
                 app:layout_collapseMode="pin"
                 app:navigationIcon="@drawable/ic_back_button"
                 tools:title="Веном" />
-
 
         </com.google.android.material.appbar.CollapsingToolbarLayout>
 
@@ -70,14 +70,12 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="16dp"
-                android:layout_marginTop="17dp"
                 android:background="@drawable/ic_textview_background"
                 android:paddingStart="4dp"
-                android:paddingTop="1dp"
                 android:paddingEnd="4dp"
                 android:paddingBottom="1dp"
                 app:layout_constraintStart_toEndOf="@+id/image_release_preview"
-                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/image_release_preview"
                 tools:text="@string/age_rating_test" />
 
             <TextView
@@ -86,15 +84,13 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="4dp"
-                android:layout_marginTop="17dp"
                 android:background="@drawable/ic_textview_background"
                 android:paddingStart="4dp"
-                android:paddingTop="1dp"
                 android:paddingEnd="4dp"
                 android:paddingBottom="1dp"
                 android:textAllCaps="true"
                 app:layout_constraintStart_toEndOf="@id/release_age_rating"
-                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/release_age_rating"
                 tools:text="@string/genres_test" />
 
             <TextView
@@ -194,7 +190,7 @@
                 android:layout_width="0dp"
                 android:layout_height="2dp"
                 android:layout_marginStart="16dp"
-                android:layout_marginTop="16.7dp"
+                android:layout_marginTop="16dp"
                 android:layout_marginEnd="16dp"
                 android:background="@color/light_gray"
                 app:layout_constraintLeft_toLeftOf="parent"
@@ -356,6 +352,7 @@
 
 
             <Button
+                android:id="@+id/buy_button_release"
                 android:layout_width="343dp"
                 android:layout_height="40dp"
                 android:layout_marginTop="14dp"
