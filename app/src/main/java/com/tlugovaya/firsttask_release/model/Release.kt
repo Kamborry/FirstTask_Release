@@ -1,17 +1,18 @@
-package com.tlugovaya.firsttask_release.ui.main
+package com.tlugovaya.firsttask_release.model
 
+import com.tlugovaya.firsttask_release.R
 import org.threeten.bp.LocalDate
 import org.threeten.bp.format.DateTimeFormatter
 
 //todo Повторить экран релиза (кроме тулбара с картинкой, списка кадров и рейтинга)
 // при клике на кнопку "поделиться", "купить билеты", "трейллер" отображать
 // алерт диалоги с соотвествующим текстом
-
 // Для отображения картинок использовать Glide/Picasso
 // для получения данных - используй getMockRelease()
 // Для работ с датами использовать ThreeTenAbp
 
 data class Release(
+    val id: String,
     val title: String,
     val ageRating: String,
     val genres: List<String>,
@@ -27,19 +28,39 @@ data class Release(
     val screenShorts: List<String>
 )
 
-fun filmDuration(time: Long): String {
-    val hours = time / 60
-    val minutes = time % 60
-    return "$hours ч. $minutes мин."
-}
+data class Banner(
+    val imageUrl: String,
+    val link: String?
+)
 
-fun dateTimeFormatter(premiere: String): String {
-    val formatter = DateTimeFormatter.ofPattern("dd MMMM yyyy")
-    val localDate = LocalDate.parse(premiere, DateTimeFormatter.ofPattern("yyyy-MM-dd"))
-    return localDate.format(formatter)
-}
+data class Repertory(
+    val banners: List<Banner>,
+    val now: List<Release>,
+    val premiere: List<Release>,
+    val kids: List<Release>,
+    val soon: List<Release>
+)
+
+fun getMockRepertory() : Repertory = Repertory(
+    banners = listOf(
+
+    ),
+    now = listOf(
+
+    ),
+    premiere = listOf(
+
+    ),
+    kids = listOf(
+
+    ),
+    soon = listOf(
+
+    )
+)
 
 fun getMockRelease() = Release(
+    id = "1",
     title = "Неоновый демон",
     ageRating = "18+",
     genres = listOf(

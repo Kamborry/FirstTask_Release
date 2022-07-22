@@ -1,10 +1,10 @@
-package com.tlugovaya.firsttask_release.ui.main
+package com.tlugovaya.firsttask_release.ui.release
 
 import androidx.lifecycle.ViewModel
 import com.tlugovaya.firsttask_release.model.getMockRelease
 
 class ReleaseViewModel : ViewModel() {
 
-    private val release = getMockRelease()
+    val release = getMockRelease()
 
 }
