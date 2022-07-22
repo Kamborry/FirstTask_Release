@@ -1,5 +1,5 @@
 package com.tlugovaya.firsttask_release.ui.main
 
-import androidx.lifecycle.ViewModel
+import androidx.fragment.app.Fragment
 
-class MainPageViewModel : ViewModel()
+class RepertoryFragment : Fragment()
