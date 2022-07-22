@@ -3,4 +3,4 @@
     android:id="@+id/toolbarMainPage"
     android:layout_width="match_parent"
     android:layout_height="45dp"
-    android:background="@drawable/ic_main_toolbar_light"/>
+    android:background="@drawable/tb_main_page"/>

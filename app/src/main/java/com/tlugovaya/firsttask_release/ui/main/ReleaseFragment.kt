@@ -33,7 +33,7 @@ class ReleaseFragment : Fragment() {
             fillingWithDataFromMock(release)
             toolbarImageRelease.downloadImage(
                 release.screenShorts.first(),
-                R.drawable.ic_title_placeholder
+                R.drawable.ph_title_image
             )
             release.posterUrl?.let { imageReleasePreview.downloadImage(it) }
             releasePoster.downloadImage(release.videoThumbnailUrl)

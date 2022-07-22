@@ -7,8 +7,8 @@ import com.tlugovaya.firsttask_release.R
 
 fun ImageView.downloadImage(
     url: String,
-    @DrawableRes drawableIdPlaceholder: Int = R.drawable.ic_placeholder,
-    @DrawableRes drawableIdError: Int = R.drawable.ic_placeholder
+    @DrawableRes drawableIdPlaceholder: Int = R.drawable.ph_image_release,
+    @DrawableRes drawableIdError: Int = R.drawable.ph_image_release
 ) {
     clipToOutline = true
     Picasso.get().load(url)
