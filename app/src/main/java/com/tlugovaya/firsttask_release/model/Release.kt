@@ -43,7 +43,26 @@ data class Repertory(
 
 fun getMockRepertory() : Repertory = Repertory(
     banners = listOf(
-
+    //https://xage.ru/media/uploads/2017/01/kong_skull_island_00.jpg
+    //https://xage.ru/media/uploads/2017/01/kong_skull_island.jpg
+    //https://geekcity.ru/wp-content/uploads/2021/03/Juy2rU86_9c.jpg
+    //https://horrorzone.ru/uploads/_pages2/70611/mini/glass-poster-14-750-300.jpg
+    //https://www.film.ru/sites/default/files/images/11305437-977865.jpg
+    //https://xage.ru/media/uploads/2017/05/pirates/pirates_01.jpg
+    //https://xage.ru/media/uploads/2018/05/aiw/aiw_04.jpg
+    //https://i.epscape.com/render/5af779aa58482862a4823396237ce2da.webp.jpg
+    //https://www.film.ru/sites/default/files/images/DD1CrA-UIAAVqCf.jpg
+    //https://sun9-20.userapi.com/impf/c824701/v824701349/16181e/y3m9vw82Lno.jpg?size=604x302&quality=96&sign=8a7ff1ea93f3939c491ed5f400debea5&type=album
+    //https://horrorzone.ru/uploads/_pages3/82238/mini/0joker-poster-06-750-300.jpg
+    //https://i0.wp.com/www.henneth-annun.ru/wp-content/uploads/2014/10/hobbit3_poster_horiz4.jpg?ssl=1
+    //https://cdn-ksvod.kyivstar.ua/content/HLS/VOD/IMAGE2/62cab18d66348e185e343c74/IMAGE_3_1_2_XL.jpg
+    //https://img.freepik.com/free-vector/horror-movie-banner_600765-180.jpg
+    //https://i0.wp.com/www.henneth-annun.ru/wp-content/uploads/2014/10/hobbit3_poster_horiz1.jpg?ssl=1
+    //https://cs8.pikabu.ru/post_img/2016/02/05/5/145465536319727727.jpg
+    //https://sun9-84.userapi.com/s/v1/if1/iPftsA0NbyTA6zbnFFl4yJ8qPI85e8TOFpPNuq65oPjleIx_g2PxnU1Kt-oaBuV0xipQGh1u.jpg?size=604x201&quality=96&type=album
+    //https://wikicomics.ru/uploads/posts/2017-11/1511348972_liga-2.jpg
+    //https://thumbs.dfs.ivi.ru/storage26/contents/4/e/a222deddf3cb953989e957471fd0b8.jpg
+    
     ),
     now = listOf(
 
