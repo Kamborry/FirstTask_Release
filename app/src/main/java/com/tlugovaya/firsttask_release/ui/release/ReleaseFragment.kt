@@ -9,6 +9,10 @@ import androidx.appcompat.app.AlertDialog
 import androidx.fragment.app.Fragment
 import com.tlugovaya.firsttask_release.R
 import com.tlugovaya.firsttask_release.databinding.FragmentReleaseBinding
+import com.tlugovaya.firsttask_release.model.Release
+import com.tlugovaya.firsttask_release.model.dateTimeFormatter
+import com.tlugovaya.firsttask_release.model.filmDuration
+import com.tlugovaya.firsttask_release.model.getMockRelease
 
 
 class ReleaseFragment : Fragment() {
@@ -18,7 +22,7 @@ class ReleaseFragment : Fragment() {
     }
 
     private lateinit var binding: FragmentReleaseBinding
-    private val release = getMockRelease()
+    private val release
 
     override fun onCreateView(
         inflater: LayoutInflater,
