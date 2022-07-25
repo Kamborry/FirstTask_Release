@@ -1,9 +1,5 @@
 package com.tlugovaya.firsttask_release.model
 
-import com.tlugovaya.firsttask_release.R
-import org.threeten.bp.LocalDate
-import org.threeten.bp.format.DateTimeFormatter
-
 //todo Повторить экран релиза (кроме тулбара с картинкой, списка кадров и рейтинга)
 // при клике на кнопку "поделиться", "купить билеты", "трейллер" отображать
 // алерт диалоги с соотвествующим текстом
@@ -41,40 +37,78 @@ data class Repertory(
     val soon: List<Release>
 )
 
-fun getMockRepertory() : Repertory = Repertory(
+fun getMockRepertory(): Repertory = Repertory(
     banners = listOf(
-    //https://xage.ru/media/uploads/2017/01/kong_skull_island_00.jpg
-    //https://xage.ru/media/uploads/2017/01/kong_skull_island.jpg
-    //https://geekcity.ru/wp-content/uploads/2021/03/Juy2rU86_9c.jpg
-    //https://horrorzone.ru/uploads/_pages2/70611/mini/glass-poster-14-750-300.jpg
-    //https://www.film.ru/sites/default/files/images/11305437-977865.jpg
-    //https://xage.ru/media/uploads/2017/05/pirates/pirates_01.jpg
-    //https://xage.ru/media/uploads/2018/05/aiw/aiw_04.jpg
-    //https://i.epscape.com/render/5af779aa58482862a4823396237ce2da.webp.jpg
-    //https://www.film.ru/sites/default/files/images/DD1CrA-UIAAVqCf.jpg
-    //https://sun9-20.userapi.com/impf/c824701/v824701349/16181e/y3m9vw82Lno.jpg?size=604x302&quality=96&sign=8a7ff1ea93f3939c491ed5f400debea5&type=album
-    //https://horrorzone.ru/uploads/_pages3/82238/mini/0joker-poster-06-750-300.jpg
-    //https://i0.wp.com/www.henneth-annun.ru/wp-content/uploads/2014/10/hobbit3_poster_horiz4.jpg?ssl=1
-    //https://cdn-ksvod.kyivstar.ua/content/HLS/VOD/IMAGE2/62cab18d66348e185e343c74/IMAGE_3_1_2_XL.jpg
-    //https://img.freepik.com/free-vector/horror-movie-banner_600765-180.jpg
-    //https://i0.wp.com/www.henneth-annun.ru/wp-content/uploads/2014/10/hobbit3_poster_horiz1.jpg?ssl=1
-    //https://cs8.pikabu.ru/post_img/2016/02/05/5/145465536319727727.jpg
-    //https://sun9-84.userapi.com/s/v1/if1/iPftsA0NbyTA6zbnFFl4yJ8qPI85e8TOFpPNuq65oPjleIx_g2PxnU1Kt-oaBuV0xipQGh1u.jpg?size=604x201&quality=96&type=album
-    //https://wikicomics.ru/uploads/posts/2017-11/1511348972_liga-2.jpg
-    //https://thumbs.dfs.ivi.ru/storage26/contents/4/e/a222deddf3cb953989e957471fd0b8.jpg
-    
+        Banner(
+            "https://xage.ru/media/uploads/2017/01/kong_skull_island_00.jpg",
+            null
+        ),
+        Banner(
+            "https://xage.ru/media/uploads/2017/01/kong_skull_island.jpg",
+            null
+        ),
+        Banner(
+            "https://geekcity.ru/wp-content/uploads/2021/03/Juy2rU86_9c.jpg",
+            null
+        ),
+        Banner(
+            "https://horrorzone.ru/uploads/_pages2/70611/mini/glass-poster-14-750-300.jpg",
+            null
+        ),
+        Banner(
+            "https://www.film.ru/sites/default/files/images/11305437-977865.jpg",
+            null
+        )
+
+        //Дополнительные ссылки, на случай, если используемые не будут работать.
+        //https://xage.ru/media/uploads/2017/05/pirates/pirates_01.jpg
+        //https://xage.ru/media/uploads/2018/05/aiw/aiw_04.jpg
+        //https://i.epscape.com/render/5af779aa58482862a4823396237ce2da.webp.jpg
+        //https://www.film.ru/sites/default/files/images/DD1CrA-UIAAVqCf.jpg
+        //https://sun9-20.userapi.com/impf/c824701/v824701349/16181e/y3m9vw82Lno.jpg?size=604x302&quality=96&sign=8a7ff1ea93f3939c491ed5f400debea5&type=album
+        //https://horrorzone.ru/uploads/_pages3/82238/mini/0joker-poster-06-750-300.jpg
+        //https://i0.wp.com/www.henneth-annun.ru/wp-content/uploads/2014/10/hobbit3_poster_horiz4.jpg?ssl=1
+        //https://cdn-ksvod.kyivstar.ua/content/HLS/VOD/IMAGE2/62cab18d66348e185e343c74/IMAGE_3_1_2_XL.jpg
+        //https://img.freepik.com/free-vector/horror-movie-banner_600765-180.jpg
+        //https://i0.wp.com/www.henneth-annun.ru/wp-content/uploads/2014/10/hobbit3_poster_horiz1.jpg?ssl=1
+        //https://cs8.pikabu.ru/post_img/2016/02/05/5/145465536319727727.jpg
+        //https://sun9-84.userapi.com/s/v1/if1/iPftsA0NbyTA6zbnFFl4yJ8qPI85e8TOFpPNuq65oPjleIx_g2PxnU1Kt-oaBuV0xipQGh1u.jpg?size=604x201&quality=96&type=album
+        //https://wikicomics.ru/uploads/posts/2017-11/1511348972_liga-2.jpg
+        //https://thumbs.dfs.ivi.ru/storage26/contents/4/e/a222deddf3cb953989e957471fd0b8.jpg
     ),
     now = listOf(
+
+        //https://static.kinoafisha.info/k/movie_posters/1080x1920/upload/movie_posters/0/8/6/8365680/741248381505.jpg
+        //https://static.kinoafisha.info/k/movie_posters/canvas/800x1200/upload/movie_posters/4/9/2/8356294/1d005924fddff94a8871d2102df5662c.jpg
+        //https://s1.afisha.ru/mediastorage/23/14/43ce20e54daa457f9f4d9de21423.jpg
+        //https://www.film.ru/sites/default/files/movies/posters/45780570-1122447.jpg
+        //https://kinobrest.by/uploads/events/56240pfp1.jpg
 
     ),
     premiere = listOf(
 
+        //https://s2.afisha.ru/mediastorage/23/24/c3ab453460c8483e8ca7fdd12423.jpg
+        //https://s1.afisha.ru/mediastorage/62/4d/32a990e368334a07a59ca3654d62.jpg
+        //https://static.kinoafisha.info/k/movie_posters/canvas/800x1200/upload/movie_posters/3/0/8/8330803/2232b59f9bafb303d6f3bc2caa221d09.jpg
+        //https://thumbs.dfs.ivi.ru/storage3/contents/a/0/bdf24ef9f368cdf1e10dbad541131f.jpg
+        //https://avatars.mds.yandex.net/get-kinopoisk-image/1773646/121a74ee-64eb-4ae4-80b7-f36a9f806e20/x1000
     ),
     kids = listOf(
+
+        //https://rossiakino.ru/upload/filmbase/posters/2563_mid_4727.jpg
+        //https://static.kinoafisha.info/k/movie_posters/1080x1920/upload/movie_posters/9/1/2/8360219/3ff0c315f854ba76548438e7df446874.jpeg
+        //https://static.kinoafisha.info/k/movie_posters/1080x1920/upload/movie_posters/0/2/5/8168520/959ee07b2de4328c6015a86bc4fc4ac9.jpg
+        //https://static.kinoafisha.info/k/movie_posters/1080x1920/upload/movie_posters/8/8/4/8323488/48d7c8522d919bcce9c0cb690e6a5465.jpeg
+        //https://static.kinoafisha.info/k/movie_posters/1080x1920/upload/movie_posters/6/7/2/8325276/bccf069da377fbed31f20d64d5b411f5.jpeg
 
     ),
     soon = listOf(
 
+        //https://s5.afisha.ru/mediastorage/a2/63/9abebeb141f7499f82fa5f4363a2.jpg
+        //https://timashevsk.ru/userfiles/images/preview_image/preview_afisha_cfmp9zk3af1582700432.jpg
+        //https://rb7.ru/system/movies/9323.jpg
+        //https://static.kinoafisha.info/k/movie_posters/canvas/800x1200/upload/movie_posters/9/4/9/8175949/ee89ae7cb1cc102e2067c96f5067fcf4.jpg
+        //https://static.kinoafisha.info/k/movie_posters/1080x1920/upload/movie_posters/3/9/3/8356393/fc2d7830149b85b72d63ae05bf7808f5.jpg
     )
 )
 
