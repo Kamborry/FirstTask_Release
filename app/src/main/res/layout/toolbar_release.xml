@@ -4,4 +4,4 @@
     android:id="@+id/toolbar_release"
     android:layout_width="match_parent"
     android:layout_height="224dp"
-    android:background="@drawable/ic_release_toolbar" />
+    android:background="@drawable/im_release_toolbar" />

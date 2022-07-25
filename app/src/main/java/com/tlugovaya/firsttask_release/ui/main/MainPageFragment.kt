@@ -7,6 +7,7 @@ import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import com.tlugovaya.firsttask_release.R
 import com.tlugovaya.firsttask_release.databinding.FragmentMainPageBinding
+import com.tlugovaya.firsttask_release.ui.release.ReleaseFragment
 
 class MainPageFragment : Fragment() {
 

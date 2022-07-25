@@ -23,6 +23,7 @@
         <entry key="app/src/main/res/drawable/ic_share_button.xml" value="0.127" />
         <entry key="app/src/main/res/drawable/ic_textview_background.xml" value="0.221" />
         <entry key="app/src/main/res/drawable/ic_title_placeholder.xml" value="0.17" />
+        <entry key="app/src/main/res/drawable/ph_image_release.xml" value="0.17" />
         <entry key="app/src/main/res/drawable/rounded_angles.xml" value="0.1335" />
         <entry key="app/src/main/res/drawable/textview_background.xml" value="0.1335" />
         <entry key="app/src/main/res/layout-v23/fragment_release.xml" value="0.25407608695652173" />

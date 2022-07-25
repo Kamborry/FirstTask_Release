@@ -1,4 +1,4 @@
-package com.tlugovaya.firsttask_release.ui.main
+package com.tlugovaya.firsttask_release.ui.release
 
 import android.os.Bundle
 import android.view.LayoutInflater
@@ -7,8 +7,13 @@ import android.view.ViewGroup
 import androidx.annotation.StringRes
 import androidx.appcompat.app.AlertDialog
 import androidx.fragment.app.Fragment
+import androidx.fragment.app.viewModels
 import com.tlugovaya.firsttask_release.R
 import com.tlugovaya.firsttask_release.databinding.FragmentReleaseBinding
+import com.tlugovaya.firsttask_release.model.Release
+import com.tlugovaya.firsttask_release.ui.main.dateTimeFormatter
+import com.tlugovaya.firsttask_release.ui.main.downloadImage
+import com.tlugovaya.firsttask_release.ui.main.filmDuration
 
 
 class ReleaseFragment : Fragment() {
@@ -17,8 +22,9 @@ class ReleaseFragment : Fragment() {
         fun newInstance() = ReleaseFragment()
     }
 
+    private val viewModel: ReleaseViewModel by viewModels()
     private lateinit var binding: FragmentReleaseBinding
-    private val release = getMockRelease()
+    private val release by lazy { viewModel.release }
 
     override fun onCreateView(
         inflater: LayoutInflater,
@@ -33,7 +39,7 @@ class ReleaseFragment : Fragment() {
             fillingWithDataFromMock(release)
             toolbarImageRelease.downloadImage(
                 release.screenShorts.first(),
-                R.drawable.ic_title_placeholder
+                R.drawable.ph_title_image
             )
             release.posterUrl?.let { imageReleasePreview.downloadImage(it) }
             releasePoster.downloadImage(release.videoThumbnailUrl)
@@ -64,7 +70,7 @@ class ReleaseFragment : Fragment() {
         genres.text = release.genres[0]
         releasePremiereDate.text = dateTimeFormatter(release.premiere)
         releaseCountryLocale.text = release.countries.joinToString()
-        releaseDurationLocale.text = release.duration?.let { filmDuration(it) }
+        releaseDurationLocale.text = release.duration?.let { context?.filmDuration(it) }
         releaseDirectorLocale.text = release.directors.joinToString()
         releaseStarringLocale.text = release.cast.joinToString()
         releaseStoryLocale.text = release.story
