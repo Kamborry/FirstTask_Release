@@ -13,4 +13,8 @@
     в тело…</string>
     <string name="rating_test">7.6</string>
     <string name="IMDb_test">6.1</string>
+
+    <string name="premiere">Премьеры</string>
+    <string name="drama">Драма</string>
+    <string name="film_title_test_name">Соник в кино</string>
 </resources>

@@ -1,6 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
-             android:layout_width="match_parent"
-             android:layout_height="match_parent">
-
-</androidx.constraintlayout.widget.ConstraintLayout>
+<ImageView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/banner_item"
+    android:layout_width="328dp"
+    android:layout_height="124dp"
+    android:background="@drawable/ph_image_release"
+    android:layout_marginTop="8dp"
+    android:layout_marginBottom="12dp"
+    android:layout_marginStart="16dp"
+    android:scaleType="centerCrop" />
