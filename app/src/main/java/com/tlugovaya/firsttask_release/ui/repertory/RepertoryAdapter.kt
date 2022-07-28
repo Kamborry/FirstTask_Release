@@ -1,4 +1,11 @@
 package com.tlugovaya.firsttask_release.ui.repertory
 
-class RepertoryAdapter {
+import androidx.recyclerview.widget.RecyclerView
+
+class RepertoryAdapter : RecyclerView.Adapter<>{
+
+    class RepertoryViewHolder{
+
+        
+    }
 }

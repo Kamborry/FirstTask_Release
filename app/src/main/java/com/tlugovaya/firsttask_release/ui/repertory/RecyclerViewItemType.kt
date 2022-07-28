@@ -1,4 +1,8 @@
 package com.tlugovaya.firsttask_release.ui.repertory
 
-class RecyclerViewItemType {
+sealed class RecyclerViewItemType {
 }
+
+class BannerItemType : RecyclerViewItemType()
+class TitleItemType : RecyclerViewItemType()
+class ReleaseItemType : RecyclerViewItemType()
