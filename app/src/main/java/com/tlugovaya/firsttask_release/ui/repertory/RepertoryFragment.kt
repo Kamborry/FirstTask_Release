@@ -6,9 +6,8 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.viewModels
-import androidx.recyclerview.widget.LinearLayoutManager
-import com.tlugovaya.firsttask_release.databinding.BannersListBinding
-import com.tlugovaya.firsttask_release.databinding.ReleaseListBinding
+import com.tlugovaya.firsttask_release.databinding.FragmentRepertoryBinding
+import com.tlugovaya.firsttask_release.model.getMockRepertory
 
 class RepertoryFragment : Fragment() {
 
@@ -16,11 +15,7 @@ class RepertoryFragment : Fragment() {
         fun newInstance() = RepertoryFragment()
     }
 
-    private lateinit var bannerAdapter: ItemBannerAdapter
-    private lateinit var releaseAdapter: ItemReleaseAdapter
-
-    private lateinit var bindingRelease: ReleaseListBinding
-    private lateinit var bindingBanners: BannersListBinding
+    private lateinit var binding: FragmentRepertoryBinding
 
     private val viewModel: RepertoryViewModel by viewModels()
 
@@ -29,34 +24,26 @@ class RepertoryFragment : Fragment() {
         container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View {
-        bindingRelease = ReleaseListBinding.inflate(inflater, container, false)
+        binding = FragmentRepertoryBinding.inflate(inflater, container, false)
+        val adapter = ItemReleaseAdapter()
+        binding.repertoryContentList.adapter = adapter
+        adapter.releases = getMockRepertory().premiere
 
-        viewModel.getRepertory().observe(viewLifecycleOwner) {
-            //bannerAdapter.submitList(it)
-            //releaseAdapter.submitList(it)
-        }
-
-        initReleaseRecyclerView()
-        //initBannerRecyclerView()
-
-        return bindingRelease.root
+//        viewModel.getRepertory().observe(viewLifecycleOwner) {
+//
+//        }
+        return binding.root
     }
 
-    private fun initReleaseRecyclerView() {
-        releaseAdapter = ItemReleaseAdapter()
-        val recyclerView = bindingRelease.listRelease
-        recyclerView.apply {
-            LinearLayoutManager(requireContext(), LinearLayoutManager.HORIZONTAL, false)
-            adapter = releaseAdapter
-        }
-    }
 
-    private fun initBannerRecyclerView() {
-       bannerAdapter = ItemBannerAdapter()
-        val recyclerView = bindingBanners.listBanners
-        recyclerView.apply {
-            LinearLayoutManager(requireContext(), LinearLayoutManager.HORIZONTAL, false)
-            adapter = bannerAdapter
-        }
-    }
 }
+
+//    private fun setupRecyclerView() {
+//        binding.rvOrderLines.apply {
+//            layoutManager = LinearLayoutManager(activity)
+//            adapter = orderLinesAdapter
+//            setHasFixedSize(true)
+//            addItemDecoration(DividerItemDecoration(activity, LinearLayoutManager.VERTICAL))
+//        }
+//    }
+

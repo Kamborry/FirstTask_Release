@@ -35,7 +35,7 @@
         <entry key="app/src/main/res/layout/fragment_release.xml" value="0.33" />
         <entry key="app/src/main/res/layout/fragment_repertory.xml" value="0.33177083333333335" />
         <entry key="app/src/main/res/layout/item_banner.xml" value="0.33" />
-        <entry key="app/src/main/res/layout/item_release.xml" value="0.67" />
+        <entry key="app/src/main/res/layout/item_release.xml" value="0.25" />
         <entry key="app/src/main/res/layout/item_title.xml" value="0.661134163208852" />
         <entry key="app/src/main/res/layout/release_list.xml" value="0.3307291666666667" />
         <entry key="app/src/main/res/layout/repertory_list.xml" value="0.3307291666666667" />

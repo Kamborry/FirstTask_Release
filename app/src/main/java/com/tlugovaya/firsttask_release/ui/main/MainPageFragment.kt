@@ -8,6 +8,7 @@ import androidx.fragment.app.Fragment
 import com.tlugovaya.firsttask_release.R
 import com.tlugovaya.firsttask_release.databinding.FragmentMainPageBinding
 import com.tlugovaya.firsttask_release.ui.release.ReleaseFragment
+import com.tlugovaya.firsttask_release.ui.repertory.RepertoryFragment
 
 class MainPageFragment : Fragment() {
 
@@ -40,7 +41,7 @@ class MainPageFragment : Fragment() {
 
     private fun showReleaseFragment() {
         parentFragmentManager.beginTransaction()
-            .add(R.id.activity_container, ReleaseFragment.newInstance())
+            .add(R.id.activity_container, RepertoryFragment.newInstance())
             .commitNow()
     }
 }
