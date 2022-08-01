@@ -10,7 +10,7 @@ import kotlin.properties.Delegates
 
 class ItemBannerAdapter : RecyclerView.Adapter<ItemBannerAdapter.ItemBannerViewHolder>() {
 
-    private var banners: List<Banner> by Delegates.observable(emptyList()) { _, _, _ ->
+    var banners: List<Banner> by Delegates.observable(emptyList()) { _, _, _ ->
         notifyDataSetChanged()
     }
 

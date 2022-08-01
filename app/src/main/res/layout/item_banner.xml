@@ -6,5 +6,6 @@
     android:background="@drawable/ph_image_release"
     android:layout_marginTop="8dp"
     android:layout_marginBottom="12dp"
-    android:layout_marginStart="16dp"
+    android:layout_marginStart="8dp"
+    android:layout_marginEnd="8dp"
     android:scaleType="centerCrop" />

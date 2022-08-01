@@ -6,7 +6,7 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.viewModels
-import com.tlugovaya.firsttask_release.databinding.FragmentRepertoryBinding
+import com.tlugovaya.firsttask_release.databinding.BannersListBinding
 import com.tlugovaya.firsttask_release.model.getMockRepertory
 
 class RepertoryFragment : Fragment() {
@@ -15,7 +15,7 @@ class RepertoryFragment : Fragment() {
         fun newInstance() = RepertoryFragment()
     }
 
-    private lateinit var binding: FragmentRepertoryBinding
+    private lateinit var binding: BannersListBinding
 
     private val viewModel: RepertoryViewModel by viewModels()
 
@@ -24,10 +24,10 @@ class RepertoryFragment : Fragment() {
         container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View {
-        binding = FragmentRepertoryBinding.inflate(inflater, container, false)
-        val adapter = ItemReleaseAdapter()
-        binding.repertoryContentList.adapter = adapter
-        adapter.releases = getMockRepertory().premiere
+        binding = BannersListBinding.inflate(inflater, container, false)
+        val adapter = ItemBannerAdapter()
+        binding.listBanners.adapter = adapter
+        adapter.banners = getMockRepertory().banners
 
 //        viewModel.getRepertory().observe(viewLifecycleOwner) {
 //
