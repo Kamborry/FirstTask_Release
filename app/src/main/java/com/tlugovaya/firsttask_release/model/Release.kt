@@ -78,11 +78,11 @@ fun getMockRepertory(): Repertory = Repertory(
     ),
     now = listOf(
         Release(
-            id = "",
+            id = "1",
             title = "Темные очки",
             ageRating = "",
             genres = listOf(
-                "", ""
+                "триллер"
             ),
             premiere = "",
             countries = listOf(
@@ -107,11 +107,11 @@ fun getMockRepertory(): Repertory = Repertory(
             )
         ),
         Release(
-            id = "",
+            id = "2",
             title = "Главный герой",
             ageRating = "",
             genres = listOf(
-                "", ""
+                "фантастика", "боевик", "комедия", "мелодрама"
             ),
             premiere = "",
             countries = listOf(
@@ -136,11 +136,11 @@ fun getMockRepertory(): Repertory = Repertory(
             )
         ),
         Release(
-            id = "",
+            id = "3",
             title = "Юморист",
             ageRating = "",
             genres = listOf(
-                "", ""
+                "драма", "биография"
             ),
             premiere = "",
             countries = listOf(
@@ -165,11 +165,11 @@ fun getMockRepertory(): Repertory = Repertory(
             )
         ),
         Release(
-            id = "",
+            id = "4",
             title = "Девятая",
             ageRating = "",
             genres = listOf(
-                "", ""
+                "детектив", "триллер", "криминал"
             ),
             premiere = "",
             countries = listOf(
@@ -194,11 +194,11 @@ fun getMockRepertory(): Repertory = Repertory(
             )
         ),
         Release(
-            id = "",
+            id = "5",
             title = "Отчаянные дольщики",
             ageRating = "",
             genres = listOf(
-                "", ""
+                "комедия", "криминал"
             ),
             premiere = "",
             countries = listOf(
@@ -225,11 +225,11 @@ fun getMockRepertory(): Repertory = Repertory(
     ),
     premiere = listOf(
         Release(
-            id = "",
+            id = "6",
             title = "Мстители. Война бесконечности",
             ageRating = "",
             genres = listOf(
-                "", ""
+                "фантастика", "боевик", "приключения"
             ),
             premiere = "",
             countries = listOf(
@@ -254,11 +254,11 @@ fun getMockRepertory(): Repertory = Repertory(
             )
         ),
         Release(
-            id = "",
+            id = "7",
             title = "Доктор Стрэндж",
             ageRating = "",
             genres = listOf(
-                "", ""
+                "фантастика", "фэнтези", "боевик", "приключения"
             ),
             premiere = "",
             countries = listOf(
@@ -283,11 +283,11 @@ fun getMockRepertory(): Repertory = Repertory(
             )
         ),
         Release(
-            id = "",
+            id = "8",
             title = "Агент 007. Не время умирать",
             ageRating = "",
             genres = listOf(
-                "", ""
+                "боевик", "триллер", "приключения"
             ),
             premiere = "",
             countries = listOf(
@@ -312,11 +312,11 @@ fun getMockRepertory(): Repertory = Repertory(
             )
         ),
         Release(
-            id = "",
+            id = "9",
             title = "Герой",
             ageRating = "",
             genres = listOf(
-                "", ""
+                "триллер", "комедия", "боевик", "криминал"
             ),
             premiere = "",
             countries = listOf(
@@ -341,11 +341,11 @@ fun getMockRepertory(): Repertory = Repertory(
             )
         ),
         Release(
-            id = "",
+            id = "10",
             title = "Соник в кино",
             ageRating = "",
             genres = listOf(
-                "", ""
+                "боевик", "комедия", "фантастика", "приключения"
             ),
             premiere = "",
             countries = listOf(
@@ -372,11 +372,11 @@ fun getMockRepertory(): Repertory = Repertory(
     ),
     kids = listOf(
         Release(
-            id = "",
+            id = "11",
             title = "Побег из космоса",
             ageRating = "",
             genres = listOf(
-                "", ""
+                "мультфильм", "приключения", "фантастика", "боевик"
             ),
             premiere = "",
             countries = listOf(
@@ -401,11 +401,11 @@ fun getMockRepertory(): Repertory = Repertory(
             )
         ),
         Release(
-            id = "",
+            id = "12",
             title = "Ледниковый период. Погоня за яйцами",
             ageRating = "",
             genres = listOf(
-                "", ""
+                "мультфильм", "комедия", "короткометражка", "приключения"
             ),
             premiere = "",
             countries = listOf(
@@ -430,11 +430,11 @@ fun getMockRepertory(): Repertory = Repertory(
             )
         ),
         Release(
-            id = "",
+            id = "13",
             title = "Как приручить дракона 3",
             ageRating = "",
             genres = listOf(
-                "", ""
+                "мультфильм", "фэнтези", "боевик", "драма"
             ),
             premiere = "",
             countries = listOf(
@@ -459,11 +459,11 @@ fun getMockRepertory(): Repertory = Repertory(
             )
         ),
         Release(
-            id = "",
+            id = "14",
             title = "Суперсемейка 2",
             ageRating = "",
             genres = listOf(
-                "", ""
+                "мультфильм", "фантастика", "боевик"
             ),
             premiere = "",
             countries = listOf(
@@ -488,11 +488,11 @@ fun getMockRepertory(): Repertory = Repertory(
             )
         ),
         Release(
-            id = "",
+            id = "15",
             title = "Фиксики. Большой секрет",
             ageRating = "",
             genres = listOf(
-                "", ""
+                "мультфильм", "приключения", "комедия"
             ),
             premiere = "",
             countries = listOf(
@@ -519,11 +519,11 @@ fun getMockRepertory(): Repertory = Repertory(
     ),
     soon = listOf(
         Release(
-            id = "",
+            id = "16",
             title = "Скажи ей",
             ageRating = "",
             genres = listOf(
-                "", ""
+                "драма"
             ),
             premiere = "",
             countries = listOf(
@@ -548,11 +548,11 @@ fun getMockRepertory(): Repertory = Repertory(
             )
         ),
         Release(
-            id = "",
-            title = "Яга",
+            id = "17",
+            title = "Яга. Кошмар темного леса",
             ageRating = "",
             genres = listOf(
-                "", ""
+                "ужасы", "фэнтези"
             ),
             premiere = "",
             countries = listOf(
@@ -577,11 +577,11 @@ fun getMockRepertory(): Repertory = Repertory(
             )
         ),
         Release(
-            id = "",
+            id = "18",
             title = "Месть банши",
             ageRating = "",
             genres = listOf(
-                "", ""
+                "боевик", "триллер"
             ),
             premiere = "",
             countries = listOf(
@@ -606,11 +606,11 @@ fun getMockRepertory(): Repertory = Repertory(
             )
         ),
         Release(
-            id = "",
-            title = "Анчартед",
+            id = "19",
+            title = "Анчартед: На картах не значится",
             ageRating = "",
             genres = listOf(
-                "", ""
+                "приключения", "боевик"
             ),
             premiere = "",
             countries = listOf(
@@ -635,11 +635,11 @@ fun getMockRepertory(): Repertory = Repertory(
             )
         ),
         Release(
-            id = "",
+            id = "20",
             title = "Веном 2",
             ageRating = "",
             genres = listOf(
-                "", ""
+                "фантастика", "боевик", "ужасы"
             ),
             premiere = "",
             countries = listOf(
@@ -667,7 +667,7 @@ fun getMockRepertory(): Repertory = Repertory(
 )
 
 fun getMockRelease() = Release(
-    id = "1",
+    id = "21",
     title = "Неоновый демон",
     ageRating = "18+",
     genres = listOf(
