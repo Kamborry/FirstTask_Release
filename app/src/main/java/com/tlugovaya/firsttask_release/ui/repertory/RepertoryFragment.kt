@@ -37,7 +37,7 @@ class RepertoryFragment : Fragment() {
         }
 
         initReleaseRecyclerView()
-        initBannerRecyclerView()
+        //initBannerRecyclerView()
 
         return bindingRelease.root
     }

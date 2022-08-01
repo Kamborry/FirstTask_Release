@@ -1,28 +1,32 @@
 package com.tlugovaya.firsttask_release.ui.repertory
 
+import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
 import com.tlugovaya.firsttask_release.databinding.ItemReleaseBinding
+import com.tlugovaya.firsttask_release.model.Banner
 import com.tlugovaya.firsttask_release.model.Release
+import com.tlugovaya.firsttask_release.ui.main.downloadImage
 
-class ItemReleaseAdapter : RecyclerView.Adapter<ItemReleaseAdapter.ItemReleaseViewHolder> {
+class ItemReleaseAdapter : RecyclerView.Adapter<ItemReleaseAdapter.ItemReleaseViewHolder>() {
 
-    val now: List<Release> = emptyList()
-    val premiere: List<Release> = emptyList()
-    val kids: List<Release> = emptyList()
-    val soon: List<Release> = emptyList()
+    private val release: List<Release> = emptyList()
 
-
-    override fun getItemCount(): Int {
-        TODO("Not yet implemented")
-    }
+    override fun getItemCount(): Int = release.size
 
     override fun onBindViewHolder(holder: ItemReleaseViewHolder, position: Int) {
-        TODO("Not yet implemented")
+        val release = release[position]
+        with(holder.bindingItemRelease){
+            release.posterUrl?.let { releaseItem.downloadImage(it) }
+            genresItem.text = release.genres[0]
+            filmTitleItem.text = release.title
+        }
     }
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ItemReleaseViewHolder {
-        TODO("Not yet implemented")
+        val layoutInflater = LayoutInflater.from(parent.context)
+        val itemBinding = ItemReleaseBinding.inflate(layoutInflater, parent, false)
+        return ItemReleaseViewHolder(itemBinding)
     }
 
     class ItemReleaseViewHolder(
