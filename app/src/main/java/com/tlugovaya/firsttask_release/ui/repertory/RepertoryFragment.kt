@@ -7,9 +7,7 @@ import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.viewModels
 import com.tlugovaya.firsttask_release.R
-import com.tlugovaya.firsttask_release.databinding.BannersListBinding
 import com.tlugovaya.firsttask_release.databinding.FragmentRepertoryBinding
-import com.tlugovaya.firsttask_release.model.getMockRepertory
 
 class RepertoryFragment : Fragment() {
 
@@ -31,36 +29,30 @@ class RepertoryFragment : Fragment() {
         val adapter = RepertoryAdapter()
         binding.repertoryContentList.adapter = adapter
 
-        val content: MutableList<RepertoryItem> = mutableListOf()
-
-        with(viewModel.repertory){
-            if(banners.isNotEmpty()) {
-                content += RepertoryItem.Banners(banners)
-            }
-            if(premiere.isNotEmpty()){
-                content += RepertoryItem.Header(getString(R.string.title_premiere))
-                content += RepertoryItem.Releases(premiere)
-            }
-            if(now.isNotEmpty()){
-                content += RepertoryItem.Header(getString(R.string.title_now))
-                content += RepertoryItem.Releases(now)
-            }
-            if(kids.isNotEmpty()){
-                content += RepertoryItem.Header(getString(R.string.title_kids))
-                content += RepertoryItem.Releases(kids)
-            }
-            if(soon.isNotEmpty()){
-                content += RepertoryItem.Header(getString(R.string.title_soon))
-                content += RepertoryItem.Releases(soon)
-            }
-        }
-
-        adapter.items = content
-
         viewModel.getRepertory().observe(viewLifecycleOwner) {
-            //val adapter = ItemBannerAdapter()
-            //binding.listBanners.adapter = adapter
-            //adapter.banners = viewModel.repertory.banners
+            val content: MutableList<RepertoryItem> = mutableListOf()
+
+            if (it.banners.isNotEmpty()) {
+                content += RepertoryItem.Banners(it.banners)
+            }
+            if (it.premiere.isNotEmpty()) {
+                content += RepertoryItem.Header(getString(R.string.title_premiere))
+                content += RepertoryItem.Releases(it.premiere)
+            }
+            if (it.now.isNotEmpty()) {
+                content += RepertoryItem.Header(getString(R.string.title_now))
+                content += RepertoryItem.Releases(it.now)
+            }
+            if (it.kids.isNotEmpty()) {
+                content += RepertoryItem.Header(getString(R.string.title_kids))
+                content += RepertoryItem.Releases(it.kids)
+            }
+            if (it.soon.isNotEmpty()) {
+                content += RepertoryItem.Header(getString(R.string.title_soon))
+                content += RepertoryItem.Releases(it.soon)
+            }
+
+            adapter.items = content
         }
         return binding.root
     }

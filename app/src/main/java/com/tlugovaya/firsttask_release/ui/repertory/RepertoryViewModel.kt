@@ -7,10 +7,12 @@ import com.tlugovaya.firsttask_release.model.Repertory
 import com.tlugovaya.firsttask_release.model.getMockRepertory
 
 class RepertoryViewModel : ViewModel() {
+    val repertory = getMockRepertory()
+    var repertoryLiveData: MutableLiveData<Repertory> = MutableLiveData()
 
-    private val repertoryLiveData: MutableLiveData<Repertory> = MutableLiveData<Repertory>()
+    init {
+        repertoryLiveData.value = repertory
+    }
 
     fun getRepertory(): LiveData<Repertory> = repertoryLiveData
-
-    val repertory = getMockRepertory()
 }

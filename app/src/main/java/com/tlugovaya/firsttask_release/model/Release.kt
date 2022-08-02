@@ -58,10 +58,13 @@ fun getMockRepertory(): Repertory = Repertory(
         Banner(
             imageUrl = "https://www.film.ru/sites/default/files/images/11305437-977865.jpg",
             link = null
+        ),
+        Banner(
+            imageUrl = "https://xage.ru/media/uploads/2017/05/pirates/pirates_01.jpg",
+            link = null
         )
 
         //Дополнительные ссылки, на случай, если используемые не будут работать.
-        //https://xage.ru/media/uploads/2017/05/pirates/pirates_01.jpg
         //https://xage.ru/media/uploads/2018/05/aiw/aiw_04.jpg
         //https://i.epscape.com/render/5af779aa58482862a4823396237ce2da.webp.jpg
         //https://www.film.ru/sites/default/files/images/DD1CrA-UIAAVqCf.jpg
