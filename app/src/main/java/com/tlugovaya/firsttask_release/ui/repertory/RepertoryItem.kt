@@ -1,4 +1,11 @@
 package com.tlugovaya.firsttask_release.ui.repertory
 
-class RepertoryItem {
+import com.tlugovaya.firsttask_release.model.Banner
+import com.tlugovaya.firsttask_release.model.Release
+
+sealed class RepertoryItem {
+    class Header(val title: String) : RepertoryItem()
+    class Releases(val items: List<Release>) : RepertoryItem()
+    class Banners(val items: List<Banner>) : RepertoryItem()
 }
+
