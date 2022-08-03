@@ -6,6 +6,7 @@ import androidx.recyclerview.widget.RecyclerView
 import com.tlugovaya.firsttask_release.databinding.ItemBannerBinding
 import com.tlugovaya.firsttask_release.model.Banner
 import com.tlugovaya.firsttask_release.ui.main.downloadImage
+import com.tlugovaya.firsttask_release.ui.main.screenPercent2px
 import kotlin.properties.Delegates
 
 class ItemBannerAdapter : RecyclerView.Adapter<ItemBannerAdapter.ItemBannerViewHolder>() {
@@ -25,6 +26,7 @@ class ItemBannerAdapter : RecyclerView.Adapter<ItemBannerAdapter.ItemBannerViewH
     override fun onBindViewHolder(holder: ItemBannerViewHolder, position: Int) {
         val banner = banners[position]
         with(holder.bindingItemBanner) {
+            bannerItem.layoutParams.width = bannerItem.context.screenPercent2px(88)
             bannerItem.downloadImage(banner.imageUrl)
         }
     }

@@ -8,6 +8,7 @@ import com.squareup.picasso.Picasso
 import com.tlugovaya.firsttask_release.R
 import org.threeten.bp.LocalDate
 import org.threeten.bp.format.DateTimeFormatter
+import kotlin.math.roundToInt
 
 fun ImageView.downloadImage(
     url: String,
@@ -32,3 +33,5 @@ fun dateTimeFormatter(premiere: String): String {
     val localDate = LocalDate.parse(premiere, DateTimeFormatter.ofPattern("yyyy-MM-dd"))
     return localDate.format(formatter)
 }
+
+fun Context.screenPercent2px(percent: Int) = (resources.displayMetrics.widthPixels / 100.0 * percent).roundToInt()
