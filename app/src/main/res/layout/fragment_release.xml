@@ -356,7 +356,6 @@
                 android:layout_width="343dp"
                 android:layout_height="40dp"
                 android:layout_marginTop="14dp"
-                android:background="@drawable/bg_buy_button"
                 android:text="@string/to_buy_tickets"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
