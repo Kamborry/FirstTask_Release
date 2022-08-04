@@ -51,7 +51,7 @@ private fun getAllReleases(): List<Release> = listOf(
             "Франция"
         ),
         posterUrl = "https://static.kinoafisha.info/k/movie_posters/1080x1920/upload/movie_posters/0/8/6/8365680/741248381505.jpg",
-        videoThumbnailUrl = "",
+        videoThumbnailUrl = "https://img04.rl0.ru/afisha/904x508q85i/s1.afisha.ru/mediastorage/cf/a8/c6e7f27d3f6041ac907cb876a8cf.jpg",
         duration = 86L,
         directors = listOf(
             "Дарио Ардженто"
@@ -90,7 +90,7 @@ private fun getAllReleases(): List<Release> = listOf(
             "США"
         ),
         posterUrl = "https://static.kinoafisha.info/k/movie_posters/canvas/800x1200/upload/movie_posters/4/9/2/8356294/1d005924fddff94a8871d2102df5662c.jpg",
-        videoThumbnailUrl = "",
+        videoThumbnailUrl = "https://s.afisha.ru/mediastorage/e1/f0/4f684d0fd8fb4a1f8ab81bbaf0e1.jpg",
         duration = 115L,
         directors = listOf(
             "Шон Леви"
@@ -131,7 +131,7 @@ private fun getAllReleases(): List<Release> = listOf(
             "Чехия"
         ),
         posterUrl = "https://s1.afisha.ru/mediastorage/23/14/43ce20e54daa457f9f4d9de21423.jpg",
-        videoThumbnailUrl = "",
+        videoThumbnailUrl = "https://b1.filmpro.ru/c/566014.700xp.jpg",
         duration = 100L,
         directors = listOf(
             "Михаил Идов"
@@ -168,7 +168,7 @@ private fun getAllReleases(): List<Release> = listOf(
             "Россия"
         ),
         posterUrl = "https://www.film.ru/sites/default/files/movies/posters/45780570-1122447.jpg",
-        videoThumbnailUrl = "",
+        videoThumbnailUrl = "https://i.ytimg.com/vi/6CdM9JrcYRg/maxresdefault.jpg",
         duration = 99L,
         directors = listOf(
             "Николай Хомерики"
@@ -209,7 +209,7 @@ private fun getAllReleases(): List<Release> = listOf(
             "Россия"
         ),
         posterUrl = "https://kinobrest.by/uploads/events/56240pfp1.jpg",
-        videoThumbnailUrl = "",
+        videoThumbnailUrl = "https://kuzbass85.ru/wp-content/uploads/2022/04/orig-5-2-scaled.jpg",
         duration = 90L,
         directors = listOf(
             "Илья Фарфель"
@@ -246,7 +246,7 @@ private fun getAllReleases(): List<Release> = listOf(
             "США"
         ),
         posterUrl = "https://s2.afisha.ru/mediastorage/23/24/c3ab453460c8483e8ca7fdd12423.jpg",
-        videoThumbnailUrl = "",
+        videoThumbnailUrl = "https://b1.filmpro.ru/c/536675.700xp.jpg",
         duration = 149L,
         directors = listOf(
             "Энтони Руссо",
@@ -287,7 +287,7 @@ private fun getAllReleases(): List<Release> = listOf(
             "США"
         ),
         posterUrl = "https://s1.afisha.ru/mediastorage/62/4d/32a990e368334a07a59ca3654d62.jpg",
-        videoThumbnailUrl = "",
+        videoThumbnailUrl = "https://www.kinonews.ru/insimgs/2021/shotimg/shotimg104444_2.jpg",
         duration = 115L,
         directors = listOf(
             "Скотт Дерриксон"
@@ -326,7 +326,7 @@ private fun getAllReleases(): List<Release> = listOf(
             "США"
         ),
         posterUrl = "https://static.kinoafisha.info/k/movie_posters/canvas/800x1200/upload/movie_posters/3/0/8/8330803/2232b59f9bafb303d6f3bc2caa221d09.jpg",
-        videoThumbnailUrl = "",
+        videoThumbnailUrl = "https://media.tatler.ru/photos/619765626d4d03405412e10d/master/w_1600%2Cc_limit/unnamed.jpg",
         duration = 163L,
         directors = listOf(
             "Кэри Дзёдзи Фукунага"
@@ -364,7 +364,7 @@ private fun getAllReleases(): List<Release> = listOf(
             "Россия"
         ),
         posterUrl = "https://thumbs.dfs.ivi.ru/storage3/contents/a/0/bdf24ef9f368cdf1e10dbad541131f.jpg",
-        videoThumbnailUrl = "",
+        videoThumbnailUrl = "https://i.ytimg.com/vi/HeybaSSdZps/maxresdefault.jpg",
         duration = 115L,
         directors = listOf(
             "Карен Оганесян"
@@ -408,7 +408,7 @@ private fun getAllReleases(): List<Release> = listOf(
             "Канада"
         ),
         posterUrl = "https://avatars.mds.yandex.net/get-kinopoisk-image/1773646/121a74ee-64eb-4ae4-80b7-f36a9f806e20/x1000",
-        videoThumbnailUrl = "",
+        videoThumbnailUrl = "https://tntmusic.ru/media/content/article/2022-03-15_10-03-47__34dc2630-a447-11ec-8770-cf8c9979ef09.jpg",
         duration = 99L,
         directors = listOf(
             "Джефф Фаулер"
@@ -441,12 +441,12 @@ private fun getAllReleases(): List<Release> = listOf(
             "фантастика",
             "боевик"
         ),
-        premiere = "",
+        premiere = "2022-07-07",
         countries = listOf(
             "Китай"
         ),
         posterUrl = "https://rossiakino.ru/upload/filmbase/posters/2563_mid_4727.jpg",
-        videoThumbnailUrl = "",
+        videoThumbnailUrl = "https://www.film.ru/sites/default/files/styles/thumb_1024x450/public/movies/frames/50298979-2204619.jpg",
         duration = 100L,
         directors = listOf(
             "Линь Хуэйда"
@@ -488,7 +488,7 @@ private fun getAllReleases(): List<Release> = listOf(
             "США"
         ),
         posterUrl = "https://static.kinoafisha.info/k/movie_posters/1080x1920/upload/movie_posters/9/1/2/8360219/3ff0c315f854ba76548438e7df446874.jpeg",
-        videoThumbnailUrl = "",
+        videoThumbnailUrl = "https://www.film.ru/sites/default/files/styles/thumb_1024x450/public/movies/posters/_imported/vX9YcP3JDr34pqjriTUkhWORxls.jpg",
         duration = 25L,
         directors = listOf(
             "Пол Стодольны",
@@ -528,7 +528,7 @@ private fun getAllReleases(): List<Release> = listOf(
             "Япония"
         ),
         posterUrl = "https://static.kinoafisha.info/k/movie_posters/1080x1920/upload/movie_posters/0/2/5/8168520/959ee07b2de4328c6015a86bc4fc4ac9.jpg",
-        videoThumbnailUrl = "",
+        videoThumbnailUrl = "https://img09.rl0.ru/afisha/e1200x600i/daily.afisha.ru/uploads/images/d/0d/d0dee1fb7cbcf49ea06d66048d4d733c.jpg",
         duration = 104L,
         directors = listOf(
             "Дин ДеБлуа"
@@ -565,7 +565,7 @@ private fun getAllReleases(): List<Release> = listOf(
             "США"
         ),
         posterUrl = "https://static.kinoafisha.info/k/movie_posters/1080x1920/upload/movie_posters/8/8/4/8323488/48d7c8522d919bcce9c0cb690e6a5465.jpeg",
-        videoThumbnailUrl = "",
+        videoThumbnailUrl = "https://b1.filmpro.ru/c/541512.700xp.jpg",
         duration = 118L,
         directors = listOf(
             "Брэд Бёрд"
@@ -605,7 +605,7 @@ private fun getAllReleases(): List<Release> = listOf(
             "Россия"
         ),
         posterUrl = "https://static.kinoafisha.info/k/movie_posters/1080x1920/upload/movie_posters/6/7/2/8325276/bccf069da377fbed31f20d64d5b411f5.jpeg",
-        videoThumbnailUrl = "",
+        videoThumbnailUrl = "https://s5.afisha.ru/mediastorage/bd/23/500612361ad24d34ba54636823bd.jpg",
         duration = 80L,
         directors = listOf(
             "Василий Бедошвили",
@@ -645,7 +645,7 @@ private fun getAllReleases(): List<Release> = listOf(
             "Россия"
         ),
         posterUrl = "https://s5.afisha.ru/mediastorage/a2/63/9abebeb141f7499f82fa5f4363a2.jpg",
-        videoThumbnailUrl = "",
+        videoThumbnailUrl = "https://www.film.ru/sites/default/files/styles/thumb_1024x450/public/movies/frames/49608826-1221985.jpg",
         duration = 98L,
         directors = listOf(
             "Александр Молочников"
@@ -684,7 +684,7 @@ private fun getAllReleases(): List<Release> = listOf(
             "Россия"
         ),
         posterUrl = "https://timashevsk.ru/userfiles/images/preview_image/preview_afisha_cfmp9zk3af1582700432.jpg",
-        videoThumbnailUrl = "",
+        videoThumbnailUrl = "https://b1.filmpro.ru/c/815781.1200xp.jpg",
         duration = 97L,
         directors = listOf(
             "Святослав Подгаевский"
@@ -724,7 +724,7 @@ private fun getAllReleases(): List<Release> = listOf(
             "США"
         ),
         posterUrl = "https://rb7.ru/system/movies/9323.jpg",
-        videoThumbnailUrl = "",
+        videoThumbnailUrl = "https://www.film.ru/sites/default/files/styles/thumb_1024x450/public/movies/frames/50317476-2201853.jpg",
         duration = 88L,
         directors = listOf(
             "Джон Кейес"
@@ -757,7 +757,7 @@ private fun getAllReleases(): List<Release> = listOf(
             "Испания"
         ),
         posterUrl = "https://static.kinoafisha.info/k/movie_posters/canvas/800x1200/upload/movie_posters/9/4/9/8175949/ee89ae7cb1cc102e2067c96f5067fcf4.jpg",
-        videoThumbnailUrl = "",
+        videoThumbnailUrl = "https://www.soyuz.ru/public/uploads/files/5/7478756/202202091716504a199e30fc.jpg",
         duration = 115L,
         directors = listOf(
             "Рубен Фляйшер"
@@ -796,7 +796,7 @@ private fun getAllReleases(): List<Release> = listOf(
             "Китай"
         ),
         posterUrl = "https://static.kinoafisha.info/k/movie_posters/1080x1920/upload/movie_posters/3/9/3/8356393/fc2d7830149b85b72d63ae05bf7808f5.jpg",
-        videoThumbnailUrl = "",
+        videoThumbnailUrl = "https://img01.rl0.ru/afisha/e1200x600i/daily.afisha.ru/uploads/images/7/af/7af3c62ada8ae67631b7f0f399030966.jpg",
         duration = 96L,
         directors = listOf(
             "Энди Серкис"
