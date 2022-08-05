@@ -1,10 +1,10 @@
 package com.tlugovaya.firsttask_release.ui.release
 
 import androidx.lifecycle.ViewModel
-import com.tlugovaya.firsttask_release.model.getMockRelease
+import com.tlugovaya.firsttask_release.model.getRelease
 
 class ReleaseViewModel : ViewModel() {
 
-    val release = getMockRelease()
+    val release = getRelease("21")
 
 }
