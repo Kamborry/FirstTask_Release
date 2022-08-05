@@ -70,9 +70,9 @@ private fun getAllReleases(): List<Release> = listOf(
                 " Диана пытается приспособиться к жизни во тьме, но серийный убийца " +
                 "следует за ней по пятам, вынуждая пребывать в состоянии постоянного ужаса.",
         screenShorts = listOf(
-            "",
-            "",
-            ""
+            "https://www.film.ru/sites/default/files/images/1-14(13).jpg",
+            "https://www.film.ru/sites/default/files/styles/epsa_1024x450/public/50226068-2050724.jpg",
+            "https://www.film.ru/sites/default/files/images/2-14(9).jpg"
         )
     ),
     Release(
@@ -111,9 +111,10 @@ private fun getAllReleases(): List<Release> = listOf(
                 "на улице красотку, точь-в-точь как в его мечтах. Эта встреча изменит не " +
                 "только нашего главного героя, но и перевернёт весь известный ему мир.",
         screenShorts = listOf(
-            "",
-            "",
-            ""
+            "https://vgtimes.ru/uploads/posts/2021-08/1629019821_3.jpg",
+            "https://img02.rl0.ru/afisha/730x-/daily.afisha.ru/uploads/images/e/65/e65e4005a4dc3856c17c41de0b6c251c.jpg",
+            "https://www.kinobusiness.com/upload/iblock/fb0/Glavniy-Geroy_Movie-still_12_novyy-razmer.jpg"
+
         )
     ),
     Release(
@@ -149,9 +150,9 @@ private fun getAllReleases(): List<Release> = listOf(
                 "и внутренняя: чем громче его успех на сцене, тем сильнее в нем " +
                 "назревает протест. И вот уже самый смешной становится слишком опасным.",
         screenShorts = listOf(
-            "",
-            "",
-            ""
+            "https://www.kino-teatr.ru/art/5277/73674.jpg",
+            "https://img05.rl0.ru/afisha/e1200x600i/daily.afisha.ru/uploads/images/e/3c/e3c57c6b74dd6e0b464569ab1d0e25c0.jpg",
+            "https://www.kino-teatr.ru/art/5277/73666.jpg"
         )
     ),
     Release(
@@ -191,9 +192,9 @@ private fun getAllReleases(): List<Release> = listOf(
                 "подлинная или мнимая способность вызывать духов погибших может помочь " +
                 "выйти на след убийцы.",
         screenShorts = listOf(
-            "",
-            "",
-            ""
+            "https://s2.afisha.ru/mediastorage/32/df/cad8a78ddfc345e7bbb49048df32.jpg",
+            "https://www.kino-teatr.ru/art/5503/77477.jpg",
+            "https://api.kinoart.ru/storage/post/block/image/2327/image-d162398f4cfc1067fa2378acb71b53c2.jpg"
         )
     ),
     Release(
@@ -227,9 +228,9 @@ private fun getAllReleases(): List<Release> = listOf(
                 "котлован для фундамента. Простые россияне не хотят мириться с несправедливостью " +
                 "и совершенно случайно берут главу строительной компании в плен.",
         screenShorts = listOf(
-            "",
-            "",
-            ""
+            "https://www.kinonews.ru/insimgs/2022/shotimg/shotimg106296_2.jpg",
+            "https://www.kino-teatr.ru/video/17887/start.jpg",
+            "https://kuzbass85.ru/wp-content/uploads/2022/04/orig-5-2-scaled.jpg"
         )
     ),
     Release(
@@ -267,9 +268,9 @@ private fun getAllReleases(): List<Release> = listOf(
                 "Мстители сталкивались ранее, вело к этому моменту – судьба Земли никогда " +
                 "ещё не была столь неопределённой.",
         screenShorts = listOf(
-            "",
-            "",
-            ""
+            "https://gamemag.ru/images/cache/News/News127955/72098b06b8-2_1390x600.jpg",
+            "https://b1.filmpro.ru/c/536675.700xp.jpg",
+            "https://www.interfax.ru/ftproot/textphotos/2018/05/03/mar700.jpg"
         )
     ),
     Release(
@@ -306,9 +307,9 @@ private fun getAllReleases(): List<Release> = listOf(
                 "между параллельными измерениями, а его миссия — защищать жителей Земли " +
                 "и противодействовать злу, какое бы обличие оно ни принимало.",
         screenShorts = listOf(
-            "",
-            "",
-            ""
+            "https://avatars.mds.yandex.net/get-kinopoisk-post-img/1345014/4bb60f7e13bf877d13e1134f46d2b65f/960x540",
+            "https://kogda-vykhodit.ru/wp-content/uploads/2019/09/doktor-strehndzh-2-film-kartinka.jpg",
+            "https://www.kinonews.ru/insimgs/2021/shotimg/shotimg104444_2.jpg"
         )
     ),
     Release(
@@ -344,9 +345,9 @@ private fun getAllReleases(): List<Release> = listOf(
                 "ученого оказывается опаснее, чем предполагалось изначально. Бонд попадает " +
                 "в ловушку таинственного злодея, вооруженного опасным биологическим оружием.",
         screenShorts = listOf(
-            "",
-            "",
-            ""
+            "https://s0.rbk.ru/v6_top_pics/ampresize/media/img/3/15/756330073027153.jpg",
+            "https://www.kino-teatr.ru/art/6127/88743.jpg",
+            "https://www.soyuz.ru/public/uploads/files/2/7448575/202010141121116c9f4bf1a1.jpg"
         )
     ),
     Release(
@@ -386,9 +387,9 @@ private fun getAllReleases(): List<Release> = listOf(
                 "Андрею предстоит пройти через любовь и предательство и узнать об истинных " +
                 "масштабах беспощадной шпионской игры, в которую он оказался втянут поневоле.",
         screenShorts = listOf(
-            "",
-            "",
-            ""
+            "https://s.afisha.ru/mediastorage/5b/70/b721e7725030476f93904541705b.jpg",
+            "https://thumbs.dfs.ivi.ru/storage32/contents/2/c/2fa53ccf47b06cfc8f61c658cb97b7.jpg",
+            "https://thumbs.dfs.ivi.ru/storage15/contents/5/1/29abcc7da5001b12dd2518e67a94f0.jpg"
         )
     ),
     Release(
@@ -426,9 +427,9 @@ private fun getAllReleases(): List<Release> = listOf(
                 "пленить ёжика и использовать его безграничные суперсилы для завоевания " +
                 "мирового господства.",
         screenShorts = listOf(
-            "",
-            "",
-            ""
+            "https://www.film.ru/sites/default/files/images/Sonic-the-Hedgehog-03.jpg",
+            "https://pluggedin.ru/images/1-bigTopImage_2022_04_06_16_46_57.jpeg",
+            "https://cdn.lifehacker.ru/wp-content/uploads/2020/02/sonic-the-hedgehog-movie-review_1582024978.jpg"
         )
     ),
     Release(
@@ -468,9 +469,9 @@ private fun getAllReleases(): List<Release> = listOf(
                 "которые хотят захватить власть во Вселенной. Медведь Брэмбл и его пушистые " +
                 "друзья должны помочь новому другу Эви и заодно спасти Вселенную.",
         screenShorts = listOf(
-            "",
-            "",
-            ""
+            "https://mediaserver.etobilet.ru/upload/movie/trailer/img/image_5194_7281.jpg",
+            "https://www.film.ru/sites/default/files/styles/thumb_1024x450/public/movies/frames/50298979-2204613.jpg",
+            "https://www.film.ru/sites/default/files/styles/thumb_1024x450/public/movies/frames/50298979-2204592.jpg"
         )
     ),
     Release(
@@ -507,9 +508,9 @@ private fun getAllReleases(): List<Release> = listOf(
                 "отправляются в бесстрашную спасательную операцию, которой суждено стать первой " +
                 "в истории погоней за яйцами.",
         screenShorts = listOf(
-            "",
-            "",
-            ""
+            "https://www.film.ru/sites/default/files/styles/thumb_1024x450/public/movies/posters/_imported/GgxiciXz9K5ng5uZ9FKisf0Mu6.jpg",
+            "https://thumbs.dfs.ivi.ru/storage39/contents/2/d/741415b662cc64ef49330f1993cffc.jpg",
+            "https://wallpapershome.ru/images/pages/ico_h/10945.jpg"
         )
     ),
     Release(
@@ -546,9 +547,9 @@ private fun getAllReleases(): List<Release> = listOf(
                 "столкнутся с безжалостным охотником на драконов, жаждущим уничтожить все, " +
                 "что им дорого.",
         screenShorts = listOf(
-            "",
-            "",
-            ""
+            "https://pluggedin.ru/images/1-bigTopImage_2019_10_11_20_24_51.jpg",
+            "https://mult.pw/uploads/posts/2019-01/1548581812_kak-priruchit-drakona-3-kristally.jpg",
+            "https://s.afisha.ru/mediastorage/2a/48/8641c6424b9b4c0fbbac587f482a.jpg"
         )
     ),
     Release(
@@ -586,9 +587,9 @@ private fun getAllReleases(): List<Release> = listOf(
                 "план, когда окажется, что спокойствию Суперсемейки угрожает новый " +
                 "могущественный враг.",
         screenShorts = listOf(
-            "",
-            "",
-            ""
+            "https://www.film.ru/sites/default/files/images/Incredibles-2-008.jpg",
+            "https://www.film.ru/sites/default/files/images/Incredibles-2-002.jpg",
+            "https://www.film.ru/sites/default/files/images/Incredibles-2-001.jpg"
         )
     ),
     Release(
@@ -628,9 +629,9 @@ private fun getAllReleases(): List<Release> = listOf(
                 "взбесившаяся техника – город на грани катастрофы! Фиксикам почти чудом " +
                 "удаётся её предотвратить. Но как сохранить их БОЛЬШОЙ СЕКРЕТ?!",
         screenShorts = listOf(
-            "",
-            "",
-            ""
+            "https://www.kinodisk.com/shots/K289_01.jpg",
+            "https://cdn.bfm.ru/news/maindocumentphoto/2018/07/23/kinopoisk.jpg",
+            "https://media.kg-portal.ru/images/fiksikibolshojsekret/fiksikibolshojsekret_12.jpg"
         )
     ),
     Release(
@@ -666,9 +667,9 @@ private fun getAllReleases(): List<Release> = listOf(
                 "он созреет и в какой-то момент обязательно решит сам. Только родителю " +
                 "от этого будет намного больнее.",
         screenShorts = listOf(
-            "",
-            "",
-            ""
+            "https://cdn-st1.rtr-vesti.ru/vh/pictures/xw/316/499/4.jpg",
+            "https://www.kinonews.ru/insimgs/2021/trailer/trailer98692.jpg",
+            "https://www.film.ru/sites/default/files/styles/thumb_1024x450/public/movies/frames/49608826-1221985.jpg"
         )
     ),
     Release(
@@ -706,9 +707,9 @@ private fun getAllReleases(): List<Release> = listOf(
                 "Тогда мальчик вместе с друзьями отправляется на поиски, " +
                 "в ходе которых выяснится, что няня — древний славянский демон.",
         screenShorts = listOf(
-            "",
-            "",
-            ""
+            "https://qsfilms.com/wp-content/uploads/2020/01/2-1.jpg",
+            "https://thumbs.dfs.ivi.ru/storage8/contents/c/4/d6476d1192b84e27fbe4a3f9db75f8.jpg",
+            "https://cdn.shazoo.ru/323535_MwsiW2bfr7_5dgug9nizbc.jpg"
         )
     ),
     Release(
@@ -738,9 +739,9 @@ private fun getAllReleases(): List<Release> = listOf(
         ),
         story = "",
         screenShorts = listOf(
-            "",
-            "",
-            ""
+            "https://www.film.ru/sites/default/files/styles/thumb_1024x450/public/movies/frames/50317476-2201841.jpg",
+            "https://www.kino-teatr.ru/acter/album/48115/1270805.jpg",
+            "https://www.vokrug.tv/pic/product/2/b/6/6/2b6698e4273beba61215ebb3c191575d.jpg"
         )
     ),
     Release(
@@ -776,9 +777,9 @@ private fun getAllReleases(): List<Release> = listOf(
                 "Узнав, что Салли знаком с Сэмом, Нейтан соглашается на авантюру, " +
                 "надеясь также отыскать и брата.",
         screenShorts = listOf(
-            "",
-            "",
-            ""
+            "https://cs12.pikabu.ru/post_img/big/2022/05/15/9/1652629687116135262.jpg",
+            "https://cdn.lifehacker.ru/wp-content/uploads/2022/02/DF-04219_1644420013-scaled-e1644420038888-630x315.jpg",
+            "https://media.kg-portal.ru/images/uncharted/uncharted_6.jpg"
         )
     ),
     Release(
@@ -815,9 +816,9 @@ private fun getAllReleases(): List<Release> = listOf(
                 "Клетуса Кэседи, а тот случайно становится хозяином симбиота Карнажа " +
                 "и сбегает из тюрьмы прямо во время собственной казни.",
         screenShorts = listOf(
-            "",
-            "",
-            ""
+            "https://www.soyuz.ru/public/uploads/files/2/7406260/202004212052509b70c51e16.jpg",
+            "https://mbr.com.ua/uploads/news/2021/05/11/d09a2552ae2ede8a0ba6675ba0791dab59bcdaa5.jpg",
+            "https://moika78.ru/news2/2021/11/trejler-1024x433.jpg"
         )
     ),
     Release(

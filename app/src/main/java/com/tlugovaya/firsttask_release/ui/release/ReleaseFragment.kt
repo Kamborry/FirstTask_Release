@@ -19,10 +19,19 @@ import com.tlugovaya.firsttask_release.ui.main.filmDuration
 class ReleaseFragment : Fragment() {
 
     companion object {
-        fun newInstance() = ReleaseFragment()
+
+        private const val RELEASE_ID_KEY = "release_id_key"
+
+        fun newInstance(releaseId: String) = ReleaseFragment().apply {
+            arguments = Bundle().apply {
+                putString(RELEASE_ID_KEY, releaseId)
+            }
+        }
     }
 
-    private val viewModel: ReleaseViewModel by viewModels()
+    private lateinit var viewModelFactory: ReleaseViewModelFactory
+
+    private val viewModel: ReleaseViewModel by viewModels { viewModelFactory }
     private lateinit var binding: FragmentReleaseBinding
     private val release by lazy { viewModel.release }
 
@@ -34,15 +43,22 @@ class ReleaseFragment : Fragment() {
         //Инициализируем биндинг.
         binding = FragmentReleaseBinding.inflate(inflater, container, false)
 
+        val releaseId = arguments!!.getString(RELEASE_ID_KEY)!!
+        viewModelFactory = ReleaseViewModelFactory(releaseId)
+
+
+
         with(binding) {
             //Заполняем данными binding.
-            fillingWithDataFromMock(release)
-            toolbarImageRelease.downloadImage(
-                release.screenShorts.first(),
-                R.drawable.ph_title_image
-            )
-            release.posterUrl?.let { imageReleasePreview.downloadImage(it) }
-            releasePoster.downloadImage(release.videoThumbnailUrl)
+            release?.let { fillingWithDataFromMock(it) }
+            release?.screenShorts?.let {
+                toolbarImageRelease.downloadImage(
+                    it.first(),
+                    R.drawable.ph_title_image
+                )
+            }
+            release?.posterUrl?.let { imageReleasePreview.downloadImage(it) }
+            release?.let { releasePoster.downloadImage(it.videoThumbnailUrl) }
         }
 
         with(binding.toolbar) {
@@ -86,7 +102,7 @@ class ReleaseFragment : Fragment() {
             .show()
     }
 
-    private fun View.setClickListenerWithAlertDialog(
+    fun View.setClickListenerWithAlertDialog(
         @StringRes dialogMessageRes: Int,
         @StringRes dialogTitle: Int = R.string.dialog_title
     ) {

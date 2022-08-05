@@ -8,7 +8,9 @@ import com.tlugovaya.firsttask_release.model.Release
 import com.tlugovaya.firsttask_release.ui.main.downloadImage
 import kotlin.properties.Delegates
 
-class ItemReleaseAdapter : RecyclerView.Adapter<ItemReleaseAdapter.ItemReleaseViewHolder>() {
+class ItemReleaseAdapter(
+    val onReleaseClickListener: (String) -> Unit
+) : RecyclerView.Adapter<ItemReleaseAdapter.ItemReleaseViewHolder>() {
 
     var releases: List<Release> by Delegates.observable(emptyList()) { _, _, _ ->
         notifyDataSetChanged()
@@ -17,7 +19,12 @@ class ItemReleaseAdapter : RecyclerView.Adapter<ItemReleaseAdapter.ItemReleaseVi
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ItemReleaseViewHolder {
         val layoutInflater = LayoutInflater.from(parent.context)
         val itemBinding = ItemReleaseBinding.inflate(layoutInflater, parent, false)
-        return ItemReleaseViewHolder(itemBinding)
+        return ItemReleaseViewHolder(itemBinding).apply {
+            itemView.setOnClickListener {
+                val currentRelease = releases[adapterPosition]
+                onReleaseClickListener(currentRelease.id)
+            }
+        }
     }
 
     override fun getItemCount(): Int = releases.size
@@ -31,8 +38,11 @@ class ItemReleaseAdapter : RecyclerView.Adapter<ItemReleaseAdapter.ItemReleaseVi
         }
     }
 
+    //fun getReleaseId(){}
+
+
+
     class ItemReleaseViewHolder(
         val bindingItemRelease: ItemReleaseBinding
     ) : RecyclerView.ViewHolder(bindingItemRelease.root)
-
 }

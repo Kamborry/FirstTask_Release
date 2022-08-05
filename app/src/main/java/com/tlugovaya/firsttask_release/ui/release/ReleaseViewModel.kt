@@ -3,8 +3,8 @@ package com.tlugovaya.firsttask_release.ui.release
 import androidx.lifecycle.ViewModel
 import com.tlugovaya.firsttask_release.model.getRelease
 
-class ReleaseViewModel : ViewModel() {
+class ReleaseViewModel(releaseId: String) : ViewModel() {
 
-    val release = getRelease("21")
+    val release = getRelease(releaseId)
 
 }

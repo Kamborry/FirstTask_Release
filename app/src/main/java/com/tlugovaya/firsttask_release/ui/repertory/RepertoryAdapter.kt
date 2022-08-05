@@ -59,7 +59,7 @@ class RepertoryAdapter() : RecyclerView.Adapter<RecyclerView.ViewHolder>() {
             }
             is ReleasesViewHolder -> {
                 (item as? RepertoryItem.Releases)?.let { releaseItem ->
-                    val adapter = ItemReleaseAdapter()
+                    val adapter = ItemReleaseAdapter(releaseItem.onClickListener)
                     holder.binding.listRelease.adapter = adapter
                     adapter.releases = releaseItem.items
                 }
