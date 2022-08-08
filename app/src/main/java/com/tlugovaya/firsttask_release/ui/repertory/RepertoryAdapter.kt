@@ -2,7 +2,9 @@ package com.tlugovaya.firsttask_release.ui.repertory
 
 import android.view.LayoutInflater
 import android.view.ViewGroup
+import androidx.recyclerview.widget.LinearSnapHelper
 import androidx.recyclerview.widget.RecyclerView
+import androidx.recyclerview.widget.SnapHelper
 import com.tlugovaya.firsttask_release.databinding.BannersListBinding
 import com.tlugovaya.firsttask_release.databinding.ItemTitleBinding
 import com.tlugovaya.firsttask_release.databinding.ReleaseListBinding
@@ -53,8 +55,10 @@ class RepertoryAdapter() : RecyclerView.Adapter<RecyclerView.ViewHolder>() {
             is BannersViewHolder -> {
                 (item as? RepertoryItem.Banners)?.let { bannersItem ->
                     val adapter = ItemBannerAdapter(bannersItem.onBannerClickListener)
+                    val snapHelper: SnapHelper = LinearSnapHelper()
                     holder.binding.listBanners.adapter = adapter
                     adapter.banners = bannersItem.items
+                    snapHelper.attachToRecyclerView(holder.binding.listBanners)
                 }
             }
             is ReleasesViewHolder -> {

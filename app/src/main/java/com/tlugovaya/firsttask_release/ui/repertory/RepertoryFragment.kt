@@ -8,6 +8,8 @@ import androidx.annotation.StringRes
 import androidx.appcompat.app.AlertDialog
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.viewModels
+import androidx.recyclerview.widget.LinearSnapHelper
+import androidx.recyclerview.widget.SnapHelper
 import com.tlugovaya.firsttask_release.R
 import com.tlugovaya.firsttask_release.databinding.FragmentRepertoryBinding
 import com.tlugovaya.firsttask_release.ui.release.ReleaseFragment
@@ -65,6 +67,7 @@ class RepertoryFragment : Fragment() {
 
             adapter.items = content
         }
+
         return binding.root
     }
 
