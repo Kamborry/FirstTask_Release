@@ -886,8 +886,8 @@ fun getMockRepertory(): Repertory = Repertory(
             link = null
         )
     ),
-    now = getRandomReleases(5),
-    premiere = getRandomReleases(5),
-    kids = getRandomReleases(5),
-    soon = getRandomReleases(5)
+    now = getRandomReleases(7),
+    premiere = getRandomReleases(7),
+    kids = getRandomReleases(7),
+    soon = getRandomReleases(7)
 )
