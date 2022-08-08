@@ -3,14 +3,15 @@ package com.tlugovaya.firsttask_release.ui.repertory
 import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
-import com.tlugovaya.firsttask_release.R
 import com.tlugovaya.firsttask_release.databinding.ItemBannerBinding
 import com.tlugovaya.firsttask_release.model.Banner
 import com.tlugovaya.firsttask_release.ui.main.downloadImage
 import com.tlugovaya.firsttask_release.ui.main.screenPercent2px
 import kotlin.properties.Delegates
 
-class ItemBannerAdapter : RecyclerView.Adapter<ItemBannerAdapter.ItemBannerViewHolder>() {
+class ItemBannerAdapter(
+    val onBannerClickListener: (String) -> Unit
+) : RecyclerView.Adapter<ItemBannerAdapter.ItemBannerViewHolder>() {
 
     var banners: List<Banner> by Delegates.observable(emptyList()) { _, _, _ ->
         notifyDataSetChanged()
@@ -19,7 +20,12 @@ class ItemBannerAdapter : RecyclerView.Adapter<ItemBannerAdapter.ItemBannerViewH
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ItemBannerViewHolder {
         val layoutInflater = LayoutInflater.from(parent.context)
         val itemBinding = ItemBannerBinding.inflate(layoutInflater, parent, false)
-        return ItemBannerViewHolder(itemBinding)
+        return ItemBannerViewHolder(itemBinding).apply {
+            itemView.setOnClickListener {
+                val currentBanner = banners[adapterPosition]
+                onBannerClickListener(currentBanner.imageUrl)
+            }
+        }
     }
 
     override fun getItemCount(): Int = banners.size
@@ -35,11 +41,4 @@ class ItemBannerAdapter : RecyclerView.Adapter<ItemBannerAdapter.ItemBannerViewH
     class ItemBannerViewHolder(
         val bindingItemBanner: ItemBannerBinding
     ) : RecyclerView.ViewHolder(bindingItemBanner.root)
-    {
-        init {
-            itemView.setOnClickListener {
-
-            }
-        }
-    }
 }

@@ -3,7 +3,6 @@ package com.tlugovaya.firsttask_release.ui.main
 import android.content.Context
 import android.widget.ImageView
 import androidx.annotation.DrawableRes
-
 import com.squareup.picasso.Picasso
 import com.tlugovaya.firsttask_release.R
 import org.threeten.bp.LocalDate
@@ -34,4 +33,5 @@ fun dateTimeFormatter(premiere: String): String {
     return localDate.format(formatter)
 }
 
-fun Context.screenPercent2px(percent: Int) = (resources.displayMetrics.widthPixels / 100.0 * percent).roundToInt()
+fun Context.screenPercent2px(percent: Int) =
+    (resources.displayMetrics.widthPixels / 100.0 * percent).roundToInt()

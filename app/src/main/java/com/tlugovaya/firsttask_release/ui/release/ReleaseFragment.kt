@@ -102,7 +102,7 @@ class ReleaseFragment : Fragment() {
             .show()
     }
 
-    fun View.setClickListenerWithAlertDialog(
+    private fun View.setClickListenerWithAlertDialog(
         @StringRes dialogMessageRes: Int,
         @StringRes dialogTitle: Int = R.string.dialog_title
     ) {

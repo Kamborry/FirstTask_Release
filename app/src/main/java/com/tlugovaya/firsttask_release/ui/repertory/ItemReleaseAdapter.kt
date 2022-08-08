@@ -38,10 +38,6 @@ class ItemReleaseAdapter(
         }
     }
 
-    //fun getReleaseId(){}
-
-
-
     class ItemReleaseViewHolder(
         val bindingItemRelease: ItemReleaseBinding
     ) : RecyclerView.ViewHolder(bindingItemRelease.root)

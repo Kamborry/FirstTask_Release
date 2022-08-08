@@ -4,6 +4,8 @@ import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.annotation.StringRes
+import androidx.appcompat.app.AlertDialog
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.viewModels
 import com.tlugovaya.firsttask_release.R
@@ -34,11 +36,15 @@ class RepertoryFragment : Fragment() {
             showReleaseFragment(releaseId)
         }
 
+        val onBannerClick: (String) -> Unit = { imageUrl ->
+            showBannerAlertDialog(imageUrl)
+        }
+
         viewModel.getRepertory().observe(viewLifecycleOwner) {
             val content: MutableList<RepertoryItem> = mutableListOf()
 
             if (it.banners.isNotEmpty()) {
-                content += RepertoryItem.Banners(it.banners)
+                content += RepertoryItem.Banners(it.banners, onBannerClick)
             }
             if (it.premiere.isNotEmpty()) {
                 content += RepertoryItem.Header(getString(R.string.title_premiere))
@@ -66,6 +72,16 @@ class RepertoryFragment : Fragment() {
         parentFragmentManager.beginTransaction()
             .add(R.id.activity_container, ReleaseFragment.newInstance(releaseId))
             .commitNow()
+    }
+
+    private fun showBannerAlertDialog(
+        dialogMessageRes: String,
+        @StringRes dialogTitle: Int = R.string.dialog_title
+    ) {
+        AlertDialog.Builder(requireContext())
+            .setTitle(dialogTitle)
+            .setMessage(dialogMessageRes)
+            .show()
     }
 }
 
