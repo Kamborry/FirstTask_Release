@@ -4,8 +4,6 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/release_icon_item"
     android:layout_width="wrap_content"
-    android:paddingTop="8dp"
-    android:paddingHorizontal="6dp"
     android:layout_height="wrap_content">
 
     <ImageView

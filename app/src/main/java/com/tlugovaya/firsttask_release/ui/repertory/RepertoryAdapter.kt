@@ -2,12 +2,16 @@ package com.tlugovaya.firsttask_release.ui.repertory
 
 import android.view.LayoutInflater
 import android.view.ViewGroup
+import androidx.core.content.res.ResourcesCompat
+import androidx.recyclerview.widget.DividerItemDecoration
 import androidx.recyclerview.widget.LinearSnapHelper
 import androidx.recyclerview.widget.RecyclerView
 import androidx.recyclerview.widget.SnapHelper
+import com.tlugovaya.firsttask_release.R
 import com.tlugovaya.firsttask_release.databinding.BannersListBinding
 import com.tlugovaya.firsttask_release.databinding.ItemTitleBinding
 import com.tlugovaya.firsttask_release.databinding.ReleaseListBinding
+import com.tlugovaya.firsttask_release.ui.main.BannersReleaseMargin
 import kotlin.properties.Delegates
 
 class RepertoryAdapter() : RecyclerView.Adapter<RecyclerView.ViewHolder>() {
@@ -56,6 +60,8 @@ class RepertoryAdapter() : RecyclerView.Adapter<RecyclerView.ViewHolder>() {
                 (item as? RepertoryItem.Banners)?.let { bannersItem ->
                     val adapter = ItemBannerAdapter(bannersItem.onBannerClickListener)
                     val snapHelper: SnapHelper = LinearSnapHelper()
+                    val itemMargin = BannersReleaseMargin()
+                    holder.binding.listBanners.addItemDecoration(itemMargin)
                     holder.binding.listBanners.adapter = adapter
                     adapter.banners = bannersItem.items
                     snapHelper.attachToRecyclerView(holder.binding.listBanners)
@@ -64,6 +70,8 @@ class RepertoryAdapter() : RecyclerView.Adapter<RecyclerView.ViewHolder>() {
             is ReleasesViewHolder -> {
                 (item as? RepertoryItem.Releases)?.let { releaseItem ->
                     val adapter = ItemReleaseAdapter(releaseItem.onReleaseClickListener)
+                    val itemMargin = BannersReleaseMargin()
+                    holder.binding.listRelease.addItemDecoration(itemMargin)
                     holder.binding.listRelease.adapter = adapter
                     adapter.releases = releaseItem.items
                 }

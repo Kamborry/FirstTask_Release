@@ -9,6 +9,8 @@ import org.threeten.bp.LocalDate
 import org.threeten.bp.format.DateTimeFormatter
 import kotlin.math.roundToInt
 
+const val EPS = 0.000001
+
 fun ImageView.downloadImage(
     url: String,
     @DrawableRes drawableIdPlaceholder: Int = R.drawable.ph_image_release,
@@ -35,3 +37,9 @@ fun dateTimeFormatter(premiere: String): String {
 
 fun Context.screenPercent2px(percent: Int) =
     (resources.displayMetrics.widthPixels / 100.0 * percent).roundToInt()
+
+fun Context.dp2px(dp: Int): Int {
+    return if (Math.abs(dp) > EPS) {
+        Math.max(dp * getResources().displayMetrics.density, 1f).toInt()
+    } else 0
+}
