@@ -19,4 +19,12 @@
     <string name="dialog_share">Вы только что нажали на кнопку "Поделиться"</string>
     <string name="dialog_play">Вы только что нажали на кнопку "Play"</string>
     <string name="dialog_buy_tickets">Вы только что нажали на кнопку "Купить билеты"</string>
+
+    <string name="release_duration">%d ч. %d мин.</string>
+
+    <string name="title_now">Сейчас в кино</string>
+    <string name="title_premiere">Премьеры</string>
+    <string name="title_kids">Для детей</string>
+    <string name="title_soon">Скоро в кино</string>
+
 </resources>

@@ -1,4 +1,4 @@
-package com.tlugovaya.firsttask_release.ui.main
+package com.tlugovaya.firsttask_release.ui.release
 
 import android.os.Bundle
 import android.view.LayoutInflater
@@ -7,18 +7,33 @@ import android.view.ViewGroup
 import androidx.annotation.StringRes
 import androidx.appcompat.app.AlertDialog
 import androidx.fragment.app.Fragment
+import androidx.fragment.app.viewModels
 import com.tlugovaya.firsttask_release.R
 import com.tlugovaya.firsttask_release.databinding.FragmentReleaseBinding
+import com.tlugovaya.firsttask_release.model.Release
+import com.tlugovaya.firsttask_release.ui.main.dateTimeFormatter
+import com.tlugovaya.firsttask_release.ui.main.downloadImage
+import com.tlugovaya.firsttask_release.ui.main.filmDuration
 
 
 class ReleaseFragment : Fragment() {
 
     companion object {
-        fun newInstance() = ReleaseFragment()
+
+        private const val RELEASE_ID_KEY = "release_id_key"
+
+        fun newInstance(releaseId: String) = ReleaseFragment().apply {
+            arguments = Bundle().apply {
+                putString(RELEASE_ID_KEY, releaseId)
+            }
+        }
     }
 
+    private lateinit var viewModelFactory: ReleaseViewModelFactory
+
+    private val viewModel: ReleaseViewModel by viewModels { viewModelFactory }
     private lateinit var binding: FragmentReleaseBinding
-    private val release = getMockRelease()
+    private val release by lazy { viewModel.release }
 
     override fun onCreateView(
         inflater: LayoutInflater,
@@ -28,15 +43,22 @@ class ReleaseFragment : Fragment() {
         //Инициализируем биндинг.
         binding = FragmentReleaseBinding.inflate(inflater, container, false)
 
+        val releaseId = arguments!!.getString(RELEASE_ID_KEY)!!
+        viewModelFactory = ReleaseViewModelFactory(releaseId)
+
+
+
         with(binding) {
             //Заполняем данными binding.
-            fillingWithDataFromMock(release)
-            toolbarImageRelease.downloadImage(
-                release.screenShorts.first(),
-                R.drawable.ic_title_placeholder
-            )
-            release.posterUrl?.let { imageReleasePreview.downloadImage(it) }
-            releasePoster.downloadImage(release.videoThumbnailUrl)
+            release?.let { fillingWithDataFromMock(it) }
+            release?.screenShorts?.let {
+                toolbarImageRelease.downloadImage(
+                    it.first(),
+                    R.drawable.ph_title_image
+                )
+            }
+            release?.posterUrl?.let { imageReleasePreview.downloadImage(it) }
+            release?.let { releasePoster.downloadImage(it.videoThumbnailUrl) }
         }
 
         with(binding.toolbar) {
@@ -64,7 +86,7 @@ class ReleaseFragment : Fragment() {
         genres.text = release.genres[0]
         releasePremiereDate.text = dateTimeFormatter(release.premiere)
         releaseCountryLocale.text = release.countries.joinToString()
-        releaseDurationLocale.text = release.duration?.let { filmDuration(it) }
+        releaseDurationLocale.text = release.duration?.let { context?.filmDuration(it) }
         releaseDirectorLocale.text = release.directors.joinToString()
         releaseStarringLocale.text = release.cast.joinToString()
         releaseStoryLocale.text = release.story

@@ -1,8 +1,8 @@
 package com.tlugovaya.firsttask_release
 
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import com.tlugovaya.firsttask_release.ui.main.MainPageFragment
+import androidx.appcompat.app.AppCompatActivity
+import com.tlugovaya.firsttask_release.ui.repertory.RepertoryFragment
 
 class MainActivity : AppCompatActivity() {
 
@@ -12,7 +12,7 @@ class MainActivity : AppCompatActivity() {
 
         if (savedInstanceState == null) {
             supportFragmentManager.beginTransaction()
-                .replace(R.id.activity_container, MainPageFragment.newInstance())
+                .replace(R.id.activity_container, RepertoryFragment.newInstance())
                 .commitNow()
         }
     }
